@@ -1,0 +1,82 @@
+company:
+  name: "TOOOA（トーア）"
+  description: >
+    iOS向けの語学学習アプリおよびカジュアルゲームを企画・開発・運用する
+    アプリ開発ブランド。Opportunity／Originality／Oneness の3つの“O”を掲げ、
+    個人開発ならではのスピード感でユーザー課題を解決するプロダクトを提供。
+
+mission:
+  vision: >
+    ユーザーの時間価値を高め、語学学習やゲームを通じて成長や楽しさを提供する。
+  values:
+    - Opportunity
+    - Originality
+    - Oneness
+
+services:
+  - name: "語彙学習アプリシリーズ（iOS／App Store）"
+    details: >
+      シンプルで続けやすいUIと学習効率を高める機能を備えた語彙学習アプリを展開。
+    lineup:
+      - 中国語単語帳500
+      - 韓国語単語帳500
+      - スペイン語単語帳500
+      - フランス語単語帳
+      - タイ語単語帳500
+      - ドイツ語単語帳500
+      - インドネシア語単語帳500
+    features:
+      - 単語の意味切替
+      - クイズによる反復学習
+      - 音声読み上げ
+      - 約500語のデータベース（一部アプリ）
+    achievements:
+      apps_published: 7
+      downloads: "250件以上"
+
+  - name: "オフラインゲーム（iOS）"
+    details: >
+      通信環境に左右されず楽しめるカジュアルゲームを開発。
+      すきま時間に没入できる体験を提供。
+
+  - name: "コンテンツ／ブログ運営"
+    details: >
+      開発の裏側や学習のコツ、留学・資格取得の体験などを発信。
+      ユーザーとのつながりを大切にし、改善や新機能のヒントにつなげる。
+
+  - name: "ユーザーサポート／改善"
+    details: >
+      機能リクエストを常時受付。個人開発の俊敏性を活かし、
+      優先度を見極めながら継続的にアップデート。
+
+tech_stack:
+  - Swift
+  - Xcode
+  - UI/UX設計
+  - データベース設計
+  - 音声API活用
+
+development_process:
+  - 企画
+  - プロトタイピング
+  - 実装
+  - テスト
+  - App Store公開
+  - 運用改善
+
+target_users:
+  - 語学学習の初学者〜中級者
+  - スマホで手軽に発音・意味確認・小テストを回したい人
+  - オフラインでカジュアルゲームを楽しみたい人
+
+achievements:
+  apps_published: 7
+  downloads: "250件以上"
+  founder: 
+    name: "竹内 音碧（Takeuchi Toa）"
+    background: "早稲田大学 人間科学部 人間情報学科／アプリ開発者"
+
+contact:
+  phone: "080-4614-0928"
+  email: "toa0928koron@icloud.com"
+  address: "非公開"

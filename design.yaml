@@ -1,0 +1,139 @@
+sections:
+  - name: "グローバルナビゲーション（ヘッダー）"
+    languages: ["HTML5", "CSS3", "JavaScript(ES6)"]
+    frameworks: ["React 18", "Next.js 13"]
+    libraries: ["styled-components / Emotion", "@stripe/ui-extension(社内)"]
+    images:
+      - description: "Stripe ロゴ"
+        format: "SVG"
+        size: "120x28px"
+        transparency: true
+    notes: |
+      position: sticky; 背景グラデーションは linear‑gradient(135deg,#7f00ff,#e100ff) を擬似要素で重ねる。
+
+  - name: "ヒーローセクション"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React / Next.js"]
+    libraries: ["Framer Motion", "GSAP ScrollTrigger"]
+    images:
+      - description: "スマホ UI モックアップ"
+        format: "PNG(α)"
+        size: "900x1800px"
+        style: "max‑width:40vw; drop‑shadow; clip‑path で角度付け"
+    notes: |
+      左カラムに H1・CTA、右カラムにモックアップを position:relative top:-60px で浮かせる。
+
+  - name: "ロゴウォール"
+    languages: ["HTML5", "CSS Grid"]
+    frameworks: ["React"]
+    libraries: ["Intersection Observer"]
+    images:
+      - description: "企業ロゴ"
+        format: "SVG"
+        size: "140x40px"
+    notes: "auto‑fit Grid で整列。スクロール時フェードイン。"
+
+  - name: "サポート CTA カード"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: ["styled-components"]
+    images:
+      - description: "右側アイコン"
+        format: "PNG"
+        size: "48x48px"
+    notes: "カード上辺 4px グラデーション border-image、box-shadow:0 24px 48px rgba(60,64,67,.15)"
+
+  - name: "決済ソリューション紹介（2カラム）"
+    languages: ["HTML5", "CSS Grid"]
+    frameworks: ["React"]
+    libraries: ["Framer Motion", "Lottie"]
+    images:
+      - description: "ピンクのカード"
+        format: "SVG"
+        size: "560x350px"
+      - description: "決済フォーム"
+        format: "PNG"
+        size: "800x600px"
+      - description: "スマホ UI"
+        format: "PNG(α)"
+        size: "900x1800px"
+    notes: |
+      背面グラデーション矩形を clip-path で斜め切り抜き。スマホは translateY(-40%)。
+
+  - name: "斜め切り替えセクション（ダーク）"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: ["GSAP ScrollTrigger"]
+    images:
+      - description: "地球ドットマップ"
+        format: "WebP"
+        size: "1920x1080px"
+        opacity: 0.25
+      - description: "ライトポイント"
+        format: "SVG"
+        animated: true
+    notes: "clip-path: polygon(0 6%,100% 0,100% 94%,0 100%) で上下斜め。"
+
+  - name: "料金体系セクション"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: ["react-intersection-observer", "react-spring"]
+    images:
+      - description: "決済ブランドアイコン"
+        format: "SVG sprite"
+        size: "32x20px"
+    notes: "Grid レイアウト。数字カウンターに react-spring。"
+
+  - name: "開発者向けセクション（コード）"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: ["Prism.js", "Copy-to-Clipboard"]
+    images: []
+    notes: "コードは <pre><code>。背景に淡い radial-gradient。"
+
+  - name: "ユースケース／導入事例スライダー"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: ["Swiper.js / Embla", "Framer Motion"]
+    images:
+      - description: "事例ロゴ"
+        format: "SVG"
+        size: "160x40px"
+      - description: "キャプチャ画像"
+        format: "WebP"
+        size: "1280x720px"
+    notes: "スライド背面にグラデーションオーバーレイ（mix-blend-mode:multiply）。"
+
+  - name: "フッター"
+    languages: ["HTML5", "CSS3"]
+    frameworks: ["React"]
+    libraries: []
+    images:
+      - description: "Stripe ロゴ"
+        format: "SVG"
+        size: "120x28px"
+    notes: "Flexbox で 4 カラム。リンクは静的。"
+
+common_stack:
+  languages: ["TypeScript", "HTML5", "CSS3"]
+  frameworks: ["React 18", "Next.js 13 (App Router)"]
+  styling: ["styled-components / Emotion", "CSS Modules (一部)"]
+  animation: ["Framer Motion", "GSAP ScrollTrigger", "Lottie"]
+  utilities:
+    [
+      "Prism.js",
+      "Swiper.js / Embla",
+      "react-intersection-observer",
+      "react-spring",
+    ]
+  build_delivery:
+    ["Vercel Edge Network", "next/image (WebP/AVIF)", "HTTP/2 + Brotli"]
+
+image_common_settings:
+  resolution: "1x / 2x (Retina) を srcset で配信"
+  transparency: "PNG α透過 + 背景グラデーション合成"
+  layering:
+    front_z_index: 2-3
+    back_gradient_z_index: -1
+  shadow: "filter: drop-shadow(0 12px 24px rgba(0,0,0,.15))"
+  responsive: "max-width: 40–60vw, @media (max-width:768px) で縦積み"

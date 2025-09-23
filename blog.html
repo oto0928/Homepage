@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TOOOA Co., Ltd.</title>
+    <link rel="icon" type="image/png" href="img/TOOOA.png">
+    <link rel="shortcut icon" type="image/png" href="img/TOOOA.png">
+    <link rel="apple-touch-icon" href="img/TOOOA.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/TOOOA.png" alt="TOOOA" class="logo-img">
+                    <span class="logo-text">TOOOA Co., Ltd.</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#member">Team</a></li>
+                <li><a href="index.html#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ブログヘッダー -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="blog-header-content">
+                <h1>TOOOA Blog</h1>
+                <p>アプリ開発の技術記事・ノウハウ・最新情報をお届けします</p>
+                <div class="blog-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">記事数</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">カテゴリー</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,200+</span>
+                        <span class="stat-label">読者数</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フィルター・検索バー -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">すべて</button>
+                    <button class="filter-btn" data-category="development">開発ノウハウ</button>
+                    <button class="filter-btn" data-category="tech">技術</button>
+                    <button class="filter-btn" data-category="design">UI/UX</button>
+                    <button class="filter-btn" data-category="game">ゲーム開発</button>
+                    <button class="filter-btn" data-category="news">お知らせ</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="blog-search" placeholder="記事を検索...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ブログ記事一覧 -->
+    <section class="blog-main">
+        <div class="container">
+            <div class="blog-layout">
+                <main class="blog-articles">
+                    <!-- フィーチャード記事 -->
+                    <a href="blog-article.html" class="article-link">
+                        <article class="article-card featured" data-category="development">
+                            <div class="article-image">
+                                <img src="img/会社イメージ５.png" alt="個人開発の経験談" class="article-img">
+                                <div class="article-category">開発ノウハウ</div>
+                                <div class="read-time">8分で読める</div>
+                            </div>
+                            <div class="article-content">
+                                <h2>個人開発でiOSアプリを7つリリースした経験談</h2>
+                                <p>語学学習アプリの企画から開発、App Store公開まで。個人開発ならではのスピード感と課題解決のプロセスを詳しく解説します。失敗から学んだ教訓や、効率的な開発フローについても紹介。</p>
+                                <div class="article-meta">
+                                    <div class="author-info">
+                                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                        <div class="author-details">
+                                            <span class="author-name">竹内 音碧</span>
+                                            <span class="publish-date">2024年3月15日</span>
+                                        </div>
+                                    </div>
+                                    <div class="article-actions">
+                                        <button class="like-btn"><i class="far fa-heart"></i> 24</button>
+                                        <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- 通常記事 -->
+                    <article class="article-card" data-category="tech">
+                        <div class="article-image">
+                            <img src="img/タイでの活動１.jpeg" alt="タイでの開発活動" class="article-img">
+                            <div class="article-category">海外展開</div>
+                            <div class="read-time">6分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>タイでのアプリ開発とローカライゼーション</h3>
+                            <p>タイ語単語帳アプリの開発を通じて学んだ、多言語対応と現地ユーザーのニーズ把握について。文化的な違いを考慮したUI設計のポイント。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年3月10日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 18</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="design">
+                        <div class="article-image">
+                            <img src="img/appaikon.中国語単語帳.jpg" alt="UI/UX設計" class="article-img">
+                            <div class="article-category">UI/UX</div>
+                            <div class="read-time">10分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>語学学習アプリのUI/UX設計で重視したポイント</h3>
+                            <p>ユーザーが継続して学習できるインターフェース設計。シンプルさと機能性のバランスを追求した設計思想を紹介します。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年3月5日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 31</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="tech">
+                        <div class="article-image">
+                            <img src="img/会社イメージ３.png" alt="Swift開発" class="article-img">
+                            <div class="article-category">技術</div>
+                            <div class="read-time">12分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>SwiftでのiOSアプリ開発：効率的なコーディング手法</h3>
+                            <p>Swift言語を使った効率的な開発手法と、App Store審査を通過するためのベストプラクティス。実際のコード例も交えて解説。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年2月28日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 27</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="game">
+                        <div class="article-image">
+                            <img src="img/appaikon.オフラインゲーム集.jpg" alt="ゲーム開発" class="article-img">
+                            <div class="article-category">ゲーム開発</div>
+                            <div class="read-time">9分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>オフラインゲームの魅力と開発のポイント</h3>
+                            <p>通信環境に左右されないカジュアルゲームの開発。ユーザー体験を重視したゲーム設計とパフォーマンス最適化について。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年2月20日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 22</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="news">
+                        <div class="article-image">
+                            <img src="img/ホーム-ようこそ！-1.jpg" alt="お知らせ" class="article-img">
+                            <div class="article-category">お知らせ</div>
+                            <div class="read-time">3分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>TOOOA公式ホームページリニューアルのお知らせ</h3>
+                            <p>より使いやすく、より分かりやすいホームページへとリニューアルいたしました。新機能や改善点をご紹介します。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年2月15日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 15</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- さらに記事を追加 -->
+                    <article class="article-card" data-category="development">
+                        <div class="article-image">
+                            <img src="img/appaikon.韓国語単語帳.jpg" alt="アプリストア最適化" class="article-img">
+                            <div class="article-category">開発ノウハウ</div>
+                            <div class="read-time">7分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>App Store最適化（ASO）で学んだこと</h3>
+                            <p>アプリのダウンロード数を増やすためのApp Store最適化。キーワード選定からスクリーンショット作成まで実践的なノウハウを共有。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年2月10日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 19</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="tech">
+                        <div class="article-image">
+                            <img src="img/会社イメージ２.png" alt="データベース設計" class="article-img">
+                            <div class="article-category">技術</div>
+                            <div class="read-time">11分で読める</div>
+                        </div>
+                        <div class="article-content">
+                            <h3>語学学習アプリのデータベース設計</h3>
+                            <p>単語データの効率的な管理と検索機能の実装。Core Dataを使った永続化とパフォーマンス最適化のテクニック。</p>
+                            <div class="article-meta">
+                                <div class="author-info">
+                                    <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">竹内 音碧</span>
+                                        <span class="publish-date">2024年2月5日</span>
+                                    </div>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="like-btn"><i class="far fa-heart"></i> 25</button>
+                                    <button class="share-btn"><i class="fas fa-share"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ページネーション -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i> 前へ</button>
+                        <div class="page-numbers">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</button>
+                            <button class="page-number">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-number">8</button>
+                        </div>
+                        <button class="page-btn next">次へ <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
+
+                <!-- サイドバー -->
+                <aside class="blog-sidebar-page">
+                    <div class="sidebar-widget">
+                        <h4>人気記事</h4>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <img src="img/appaikon.中国語単語帳.jpg" alt="UI/UX設計" class="popular-img">
+                                <div class="popular-content">
+                                    <h5>語学学習アプリのUI/UX設計で重視したポイント</h5>
+                                    <span class="popular-views">1,234 views</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <img src="img/会社イメージ５.png" alt="個人開発" class="popular-img">
+                                <div class="popular-content">
+                                    <h5>個人開発でiOSアプリを7つリリースした経験談</h5>
+                                    <span class="popular-views">987 views</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+                                <img src="img/appaikon.オフラインゲーム集.jpg" alt="ゲーム開発" class="popular-img">
+                                <div class="popular-content">
+                                    <h5>オフラインゲームの魅力と開発のポイント</h5>
+                                    <span class="popular-views">756 views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>タグクラウド</h4>
+                        <div class="tag-cloud">
+                            <span class="tag">Swift</span>
+                            <span class="tag">iOS</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">個人開発</span>
+                            <span class="tag">語学学習</span>
+                            <span class="tag">ゲーム開発</span>
+                            <span class="tag">App Store</span>
+                            <span class="tag">ASO</span>
+                            <span class="tag">Core Data</span>
+                            <span class="tag">ローカライゼーション</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>アーカイブ</h4>
+                        <ul class="archive-list">
+                            <li><a href="#">2024年3月 <span>(3)</span></a></li>
+                            <li><a href="#">2024年2月 <span>(5)</span></a></li>
+                            <li><a href="#">2024年1月 <span>(4)</span></a></li>
+                            <li><a href="#">2023年12月 <span>(3)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget newsletter">
+                        <h4>ニュースレター</h4>
+                        <p>最新の記事をメールでお届けします</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="メールアドレス" required>
+                            <button type="submit" class="btn btn-primary">購読する</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="img/TOOOA.png" alt="TOOOA" class="footer-logo">
+                        <span class="footer-logo-text">TOOOA Co., Ltd.</span>
+                    </div>
+                    <p>東亜から世界へ。アプリで未来をつくる。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#member">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOOOA. All rights reserved.</p>
+                <a href="#" class="privacy-link">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog-page.js"></script>
+</body>
+</html>

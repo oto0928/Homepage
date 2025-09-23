@@ -1,0 +1,78 @@
+TOOOA_website:
+  sections:
+    - id: hero
+      title: "ヒーローセクション（TOP・メインビジュアル）"
+      content:
+        catchphrase: "東亜から世界へ。アプリで未来をつくる。"
+        background: "背景画像 or シンプルなアニメーション"
+        cta_buttons:
+          - "お問い合わせ"
+          - "実績を見る"
+
+    - id: about
+      title: "会社概要（About TOOOA）"
+      content:
+        vision: "企業理念・ビジョン（TOOOAの由来など）"
+        mission: "ミッションステートメント"
+        founder_message: "創業者からのメッセージ（任意）"
+
+    - id: members
+      title: "自己紹介（代表紹介 / メンバー紹介）"
+      content:
+        representative:
+          photo: "代表者プロフィール写真"
+          bio: "簡単な経歴・メッセージ・これまでのタイでの活動"
+          sns_links:
+            - Twitter
+            - GitHub
+
+    - id: services
+      title: "サービス紹介（What We Do）"
+      content:
+        services:
+          - "アプリ開発"
+          - "UI/UX設計"
+          - "プロトタイピング"
+        technologies: "対応可能な技術やプラットフォーム"
+        target_clients: "対応できる顧客・課題"
+
+    - id: portfolio
+      title: "制作実績・ポートフォリオ"
+      content:
+        works:
+          - screenshot: "アプリのスクリーンショット"
+            description: "アプリの説明"
+            link: "公開アプリがある場合のリンク"
+            technologies:
+              - Flutter
+              - React Native
+              - Firebase
+
+    - id: blog
+      title: "ブログ / お知らせ"
+      content:
+        posts: "技術記事や開発ノウハウ"
+        announcements: "お知らせ（新サービス開始、採用情報など）"
+        external_links:
+          - Medium
+          - note
+
+    - id: contact
+      title: "依頼・相談受付（Contact / お仕事のご依頼）"
+      content:
+        form: "フォーム or メールアドレス"
+        topics: "相談可能な内容（開発、共同企画、講演など）"
+        pricing: "料金の目安 or 相談ベースである旨"
+
+    - id: footer
+      title: "フッター"
+      content:
+        navigation: "ナビゲーションリンク（ページ下部へのショートカット）"
+        sns_links:
+          - Twitter
+          - Instagram
+          - GitHub
+        other:
+          - 所在地（任意）
+          - 著作権表示
+          - プライバシーポリシーリンク
