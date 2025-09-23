@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイ留学で学んだアプリ開発とローカライゼーション - TOOOA Blog</title>
+    <meta name="description" content="タイ短期留学での経験を通じて学んだアプリ開発とローカライゼーションの重要性について。現地のニーズを理解し、グローバル展開を成功させるための知見を共有。">
+    <link rel="icon" type="image/png" href="img/TOOOA.png">
+    <link rel="shortcut icon" type="image/png" href="img/TOOOA.png">
+    <link rel="apple-touch-icon" href="img/TOOOA.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/TOOOA.png" alt="TOOOA" class="logo-img">
+                    <span class="logo-text">TOOOA Co., Ltd.</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#member">Team</a></li>
+                <li><a href="index.html#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずナビ -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><span>タイ留学で学んだアプリ開発とローカライゼーション</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <section class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <div class="article-category-badge">海外展開</div>
+                <h1 class="article-title">タイ留学で学んだアプリ開発とローカライゼーション</h1>
+                <p class="article-subtitle">現地体験から見えた、グローバル展開成功の鍵</p>
+                
+                <div class="article-meta-header">
+                    <div class="author-section">
+                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar-large">
+                        <div class="author-info-detailed">
+                            <h3 class="author-name">竹内 音碧</h3>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="article-stats">
+                        <div class="stat-item">
+                            <i class="far fa-calendar"></i>
+                            <span>2025年3月15日</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-clock"></i>
+                            <span>8分で読める</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-eye"></i>
+                            <span>127 views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 記事本文 -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-layout">
+                <main class="article-main">
+                    <!-- 記事画像 -->
+                    <div class="article-featured-image">
+                        <img src="img/blog.thai.発表.jpeg" alt="タイでのプレゼンテーション" class="featured-img">
+                        <div class="image-caption">CPALLでのインターンプレゼンテーション</div>
+                    </div>
+
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h3><i class="fas fa-list"></i> 目次</h3>
+                        <ol>
+                            <li><a href="#introduction">はじめに</a></li>
+                            <li><a href="#study-abroad-overview">タイ留学の概要</a></li>
+                            <li><a href="#thai-market-analysis">タイ市場の特徴</a></li>
+                            <li><a href="#internship-experience">インターン体験</a></li>
+                            <li><a href="#localization-strategy">ローカライゼーション戦略</a></li>
+                            <li><a href="#technical-challenges">技術実装の課題</a></li>
+                            <li><a href="#cultural-ux-insights">文化交流とUX設計</a></li>
+                            <li><a href="#future-plans">今後の展開</a></li>
+                            <li><a href="#conclusion">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- 記事本文 -->
+                    <div class="article-body">
+                        <section id="introduction">
+                            <h2>はじめに</h2>
+                            <p>こんにちは、TOOOAの竹内です。今回は、2025年2月にタイで1ヶ月間の短期留学を通じて学んだ、アプリ開発におけるローカライゼーションの重要性についてお話しします。現地でのインターン経験や文化交流を通じて得た、グローバル展開を成功させるための実践的な知見をお伝えします。</p>
+                            
+                            <p>この記事では、技術的な詳細だけでなく、現地での生活体験から見えてきた文化的な違いや、それがアプリ開発にどう影響するかについても詳しく解説していきます。海外展開を考えている開発者の方の参考になれば幸いです。</p>
+                        </section>
+
+                        <section id="study-abroad-overview">
+                            <h2>タイ留学の概要</h2>
+                            <p>私が参加したのは、早稲田大学とタイのPIM経営学院（Panyapiwat Institute of Management）との交流プログラムでした。CPグループが運営するこの学院で、1ヶ月間の短期留学を経験しました。</p>
+                            
+                            <blockquote class="quote">
+                                <p>「現地に住んでみないと分からないユーザーの行動パターンや文化的背景がある」</p>
+                                <cite>— 留学中に実感したこと</cite>
+                            </blockquote>
+                            
+                            <p>留学プログラムの詳細は以下の通りです：</p>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> 留学プログラム詳細</h4>
+                                <ul>
+                                    <li><strong>期間</strong>：2025年2月（1ヶ月間）</li>
+                                    <li><strong>留学先</strong>：PIM経営学院（Panyapiwat Institute of Management）</li>
+                                    <li><strong>運営</strong>：タイ最大財閥CPグループ</li>
+                                    <li><strong>総費用</strong>：約10万円（補助金7万円含む）</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="thai-market-analysis">
+                            <h2>アプリ開発者から見たタイ市場の特徴</h2>
+                            <h3>デジタル環境の違い</h3>
+                            <p>タイでの生活を通じて、日本とは大きく異なるデジタル環境とユーザー行動を観察することができました。これらの違いは、アプリ開発におけるローカライゼーション戦略に重要な示唆を与えてくれます。</p>
+
+                            <div class="warning-box">
+                                <h4><i class="fas fa-exclamation-triangle"></i> 日本 vs タイ：デジタル環境の比較</h4>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>項目</th>
+                                            <th>日本</th>
+                                            <th>タイ</th>
+                                            <th>開発への影響</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>主要SNS</td>
+                                            <td>LINE, Twitter, Instagram</td>
+                                            <td>LINE, Facebook, TikTok</td>
+                                            <td>シェア機能の最適化が必要</td>
+                                        </tr>
+                                        <tr>
+                                            <td>決済方法</td>
+                                            <td>クレカ, 電子マネー</td>
+                                            <td>現金, モバイル決済</td>
+                                            <td>決済システムの多様化対応</td>
+                                        </tr>
+                                        <tr>
+                                            <td>言語</td>
+                                            <td>日本語</td>
+                                            <td>タイ語, 英語</td>
+                                            <td>多言語対応とフォント選択</td>
+                                        </tr>
+                                        <tr>
+                                            <td>通信環境</td>
+                                            <td>高速・安定</td>
+                                            <td>地域差あり</td>
+                                            <td>軽量化とオフライン対応</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>ユーザー行動の観察</h3>
+                            <p>現地でのユーザー行動を観察した結果、以下のような特徴を発見しました：</p>
+                            
+                            <ul>
+                                <li>音声機能への依存度が高い（タイ語の文字入力の複雑さから）</li>
+                                <li>グループ学習を好む文化的背景</li>
+                                <li>視覚的なフィードバックを重視する傾向</li>
+                                <li>短時間集中型の学習スタイル</li>
+                            </ul>
+                        </section>
+
+                        <section id="internship-experience">
+                            <h2>CPALLインターンで学んだビジネス視点</h2>
+                            
+                            <h3>インターン概要</h3>
+                            <p>留学中の最も貴重な経験は、CPグループの子会社「CPALL」でのインターンでした。ここで私は、日本企業「物語コーポレーション（焼肉きんぐ）」のタイ進出可否を検討する調査業務を担当しました。</p>
+                            
+                            <div class="feedback-section">
+                                <div class="feedback-item positive">
+                                    <h4><i class="fas fa-briefcase"></i> 担当業務</h4>
+                                    <ul>
+                                        <li>市場調査レポートの作成</li>
+                                        <li>競合分析と参入戦略の検討</li>
+                                        <li>英語でのプレゼンテーション</li>
+                                        <li>現地スタッフとの協業</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="feedback-item negative">
+                                    <h4><i class="fas fa-lightbulb"></i> 学んだローカライゼーションの原則</h4>
+                                    <ul>
+                                        <li>現地ユーザー理解の重要性</li>
+                                        <li>文化的背景の深い理解が必要</li>
+                                        <li>段階的なアプローチの有効性</li>
+                                        <li>現地パートナーとの協力が不可欠</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>ビジネス調査から見えた課題</h3>
+                            <p>インターンでの調査業務を通じて、アプリのグローバル展開においても同様の課題があることを実感しました：</p>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">1</div>
+                                    <div class="timeline-content">
+                                        <h4>市場調査フェーズ</h4>
+                                        <p>現地の言語学習ニーズ、競合アプリの分析、ユーザーインタビューの実施</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">2</div>
+                                    <div class="timeline-content">
+                                        <h4>技術的適応フェーズ</h4>
+                                        <p>タイ語フォント対応、現地決済システム統合、通信環境への最適化</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">3</div>
+                                    <div class="timeline-content">
+                                        <h4>コンテンツローカライゼーション</h4>
+                                        <p>文化的コンテキストに合わせた例文作成、現地の祝日・イベントへの対応</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="localization-strategy">
+                            <h2>実践的なローカライゼーション戦略</h2>
+                            <h3>技術実装での課題と解決策</h3>
+                            <p>タイでの経験を踏まえ、語学学習アプリの海外展開において実践すべき具体的な戦略をまとめました。</p>
+
+                            <div class="code-block">
+                                <h4>タイ語対応フォント設定の例</h4>
+                                <pre><code class="language-swift">
+// タイ語対応フォント設定
+let thaiFont = UIFont(name: "Sukhumvit Set", size: 16)
+
+// 改行処理の最適化
+let thaiText = "สวัสดีครับ ผมชื่อโอโตะ"
+let attributedString = NSMutableAttributedString(string: thaiText)
+attributedString.addAttribute(.font, value: thaiFont, range: NSRange(location: 0, length: thaiText.count))
+
+// 単語境界の検出
+let locale = Locale(identifier: "th_TH")
+text.enumerateSubstrings(in: text.startIndex..<text.endIndex, 
+                        options: [.byWords, .localized]) { (substring, range, _, _) in
+    // 単語ごとの処理
+}
+                                </code></pre>
+                            </div>
+
+                            <h3>現地決済システムの統合</h3>
+                            <p>タイでは TrueMoney、Rabbit LINE Pay など独自の決済システムが普及しています。これらとの統合には以下のアプローチが有効です：</p>
+                            
+                            <ul>
+                                <li>現地パートナーとの技術連携</li>
+                                <li>段階的な決済オプション追加</li>
+                                <li>まずは国際的な決済手段から開始</li>
+                                <li>現地開発者コミュニティとの情報交換</li>
+                            </ul>
+                        </section>
+
+                        <section id="technical-challenges">
+                            <h2>技術実装における具体的な課題</h2>
+                            
+                            <h3>1. タイ語表示の複雑さ</h3>
+                            <p>タイ語は子音・母音・声調記号が複雑に組み合わさり、フォント選択やレイアウト調整が困難でした。また、単語間にスペースがないため、改行位置の判定も複雑になります。</p>
+                            
+                            <h3>2. 文化的配慮の実装</h3>
+                            <p>現地での文化交流を通じて学んだUX設計のポイントをアプリに反映する必要があります：</p>
+                            
+                            <ul>
+                                <li>協調学習機能の強化</li>
+                                <li>視覚的なフィードバックの充実</li>
+                                <li>短時間集中型の学習設計</li>
+                                <li>現地の色彩感覚に合わせたUI</li>
+                            </ul>
+
+                            <h3>3. 継続的な改善とアップデート</h3>
+                            <p>現地でのフィードバックを基に、定期的なアップデートを実施する計画です：</p>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v2.0</div>
+                                    <div class="timeline-content">
+                                        <h4>タイ語対応版リリース</h4>
+                                        <p>基本的なタイ語学習機能、現地ニーズに対応</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v2.1</div>
+                                    <div class="timeline-content">
+                                        <h4>文化的機能追加</h4>
+                                        <p>グループ学習機能、現地の祝日対応</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v2.2</div>
+                                    <div class="timeline-content">
+                                        <h4>決済システム統合</h4>
+                                        <p>現地決済システム対応、プレミアム機能追加</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="cultural-ux-insights">
+                            <h2>文化交流から学んだUX設計のヒント</h2>
+                            <p>現地での幼稚園・高校生との交流や観光体験を通じて、タイの人々の価値観や美意識を理解することができました。これらの知見をアプリのUX設計に活かしていきます。</p>
+                            
+                            <ul class="app-list-compact">
+                                <li>協調学習を重視する文化的背景への対応</li>
+                                <li>視覚的なフィードバックを好む傾向への配慮</li>
+                                <li>短時間集中型の学習スタイルに合わせた設計</li>
+                                <li>現地の色彩感覚や装飾への好みを反映</li>
+                                <li>宗教的配慮を含むコンテンツ設計</li>
+                            </ul>
+                        </section>
+
+                        <section id="future-plans">
+                            <h2>今後の展開：グローバル対応アプリの開発</h2>
+                            <ul class="bullet-list">
+                                <li><strong>タイ語学習アプリ:</strong> 現地で学んだ知見を活かした日本人向けアプリの開発</li>
+                                <li><strong>多言語対応フレームワーク:</strong> 他の東南アジア言語にも対応できる拡張可能なアーキテクチャ</li>
+                                <li><strong>現地パートナーシップ:</strong> タイの教育機関・企業との連携による現地特化機能の開発</li>
+                                <li><strong>文化的適応:</strong> 各国の文化的背景を考慮したUX設計の標準化</li>
+                                <li><strong>技術基盤強化:</strong> 多言語・多通貨・多決済に対応したプラットフォームの構築</li>
+                            </ul>
+                        </section>
+
+                        <section id="conclusion">
+                            <h2>まとめ</h2>
+                            <p>1ヶ月間のタイ留学は、アプリ開発者として大きな成長の機会となりました。技術的なスキルだけでなく、異文化理解とビジネス視点の重要性を実感できたことが最大の収穫です。</p>
+                            
+                            <div class="key-takeaways">
+                                <h3><i class="fas fa-key"></i> 重要なポイント</h3>
+                                <ol>
+                                    <li><strong>現地体験の重要性</strong>：机上の調査では得られない、生の情報とインサイト</li>
+                                    <li><strong>文化的配慮</strong>：技術的な対応だけでなく、文化的な理解が不可欠</li>
+                                    <li><strong>段階的アプローチ</strong>：一度にすべてを現地化するのではなく、段階的な展開が現実的</li>
+                                    <li><strong>現地パートナーシップ</strong>：信頼できる現地パートナーとの協力が成功の鍵</li>
+                                    <li><strong>継続的な学習</strong>：グローバル展開は一度きりではなく、継続的な改善が必要</li>
+                                </ol>
+                            </div>
+                            
+                            <p>これからグローバル展開を考えている開発者の方へのアドバイスとして、「現地に足を運び、実際にユーザーと接すること」をお勧めします。オンラインでの調査だけでは分からない、文化的な背景や価値観を理解することが、成功への近道だと確信しています。</p>
+                            
+                            <p>アプリのグローバル展開は決して簡単な道ではありませんが、現地のユーザーに愛されるプロダクトを作る喜びは何物にも代えがたいものです。皆さんも是非、グローバル展開の世界に挑戦してみてください。</p>
+                        </section>
+                    </div>
+
+                    <!-- 記事下部のアクション -->
+                    <div class="article-actions">
+                        <div class="social-share">
+                            <h4>この記事をシェア</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                                <button class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</button>
+                                <button class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                                <button class="share-btn copy"><i class="fas fa-link"></i> リンクをコピー</button>
+                            </div>
+                        </div>
+                        
+                        <div class="article-rating">
+                            <h4>この記事は役に立ちましたか？</h4>
+                            <div class="rating-buttons">
+                                <button class="rating-btn helpful"><i class="fas fa-thumbs-up"></i> 役に立った</button>
+                                <button class="rating-btn not-helpful"><i class="fas fa-thumbs-down"></i> 改善が必要</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 関連記事 -->
+                    <div class="related-articles">
+                        <h3>関連記事</h3>
+                        <div class="related-grid">
+                            <article class="related-item">
+                                <img src="img/会社イメージ５.png" alt="個人開発" class="related-img">
+                                <div class="related-content">
+                                    <h4>個人開発でiOSアプリを7つリリースした経験談</h4>
+                                    <p>語学学習アプリの企画から開発、App Store公開まで</p>
+                                    <span class="related-date">2025年2月28日</span>
+                                </div>
+                            </article>
+                            
+                            <article class="related-item">
+                                <img src="img/appaikon.中国語単語帳.jpg" alt="UI/UX設計" class="related-img">
+                                <div class="related-content">
+                                    <h4>語学学習アプリのUI/UX設計で重視したポイント</h4>
+                                    <p>ユーザーが継続して学習できるインターフェース設計について</p>
+                                    <span class="related-date">2024年3月5日</span>
+                                </div>
+                            </article>
+                            
+                            <article class="related-item">
+                                <img src="img/会社イメージ３.png" alt="Swift開発" class="related-img">
+                                <div class="related-content">
+                                    <h4>SwiftでのiOSアプリ開発：効率的なコーディング手法</h4>
+                                    <p>Swift言語を使った効率的な開発手法とベストプラクティス</p>
+                                    <span class="related-date">2024年2月28日</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- サイドバー -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget author-widget-simple">
+                        <h4>著者について</h4>
+                        <div class="author-simple">
+                            <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-photo">
+                            <h5 class="author-name">竹内 音碧</h5>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。語学学習とゲームの力で、ユーザーの時間価値を高めることを目指している。</p>
+                            <div class="author-links">
+                                <a href="https://github.com/oto0928" class="author-link">GitHub</a>
+                                <a href="#" class="author-link">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget toc-widget">
+                        <h4>目次</h4>
+                        <nav class="toc-nav">
+                            <ul>
+                                <li><a href="#introduction">はじめに</a></li>
+                                <li><a href="#study-abroad-overview">タイ留学の概要</a></li>
+                                <li><a href="#thai-market-analysis">タイ市場の特徴</a></li>
+                                <li><a href="#internship-experience">インターン体験</a></li>
+                                <li><a href="#localization-strategy">ローカライゼーション戦略</a></li>
+                                <li><a href="#technical-challenges">技術実装の課題</a></li>
+                                <li><a href="#cultural-ux-insights">文化交流とUX設計</a></li>
+                                <li><a href="#future-plans">今後の展開</a></li>
+                                <li><a href="#conclusion">まとめ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="sidebar-widget newsletter-widget">
+                        <h4>最新記事をお届け</h4>
+                        <p>新しい記事が公開されたらメールでお知らせします</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="メールアドレス" required>
+                            <button type="submit" class="btn btn-primary">購読する</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="img/TOOOA.png" alt="TOOOA" class="footer-logo">
+                        <span class="footer-logo-text">TOOOA Co., Ltd.</span>
+                    </div>
+                    <p>東亜から世界へ。アプリで未来をつくる。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#member">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@%E9%9F%B3-v2w" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/toa050928/?locale=ja_JP" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/oto0928" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOOOA. All rights reserved.</p>
+                <a href="#" class="privacy-link">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+    <script src="blog-article.js"></script>
+</body>
+</html>

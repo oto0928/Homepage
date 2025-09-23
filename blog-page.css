@@ -402,6 +402,15 @@
     padding-bottom: 0;
 }
 
+.popular-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
 .popular-img {
     width: 60px;
     height: 60px;
