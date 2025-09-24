@@ -63,10 +63,23 @@
     z-index: -1;
 }
 
+.article-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0;
+}
+
 .article-header-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .article-category-badge {
@@ -117,24 +130,37 @@
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .author-info-detailed h3 {
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
+    color: var(--text-white);
+    font-weight: 600;
 }
 
 .author-title {
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 .author-bio {
     font-size: 0.8rem;
-    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
+    font-weight: 400;
+}
+
+/* 記事ヘッダー内の著者肩書・自己紹介を純白に固定 */
+.article-header .author-title {
+    color: #ffffff !important;
+}
+.article-header .author-bio {
+    color: #ffffff !important;
 }
 
 .article-stats {
@@ -1071,6 +1097,23 @@
     padding: 1.5rem;
 }
 
+/* Sidebar hardening: prevent code styles bleed and enforce readable typography */
+.article-sidebar .sidebar-widget,
+.article-sidebar .sidebar-widget * {
+    white-space: normal;
+    font-family: 'Inter', 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.article-sidebar .author-widget-simple {
+    background: #f8fafc !important;
+    color: var(--text-dark) !important;
+}
+.article-sidebar .author-widget-simple .author-title {
+    color: var(--primary-color) !important;
+}
+.article-sidebar .author-widget-simple .author-bio {
+    color: var(--text-light) !important;
+}
+
 .author-widget-simple h4 {
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -1158,6 +1201,8 @@
 .toc-widget {
     position: sticky;
     top: 100px;
+    z-index: 2;               /* 目次を他要素より前面に */
+    background: #ffffff;      /* 重なり時の読みやすさ確保 */
 }
 
 .toc-nav ul {

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人開発でiOSアプリを7つリリースした経験談 - TOOOA Blog</title>
+    <meta name="description" content="語学学習アプリの企画から開発、App Store公開まで。個人開発ならではのスピード感と課題解決のプロセスを詳しく解説します。">
+    <link rel="icon" type="image/png" href="img/fabikon.png">
+    <link rel="shortcut icon" type="image/png" href="img/fabikon.png">
+    <link rel="apple-touch-icon" href="img/fabikon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-page.css">
+    <link rel="stylesheet" href="blog-article-lessons-apps.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/TOOOA.png" alt="TOOOA" class="logo-img">
+                    <span class="logo-text">TOOOA Co., Ltd.</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#member">Team</a></li>
+                <li><a href="index.html#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずナビ -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><span>個人開発でiOSアプリを7つリリースした経験談</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <section class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <div class="article-category-badge">開発ノウハウ</div>
+                <h1 class="article-title">個人開発でiOSアプリを7つリリースした経験談</h1>
+                <p class="article-subtitle">語学学習アプリの企画から開発、App Store公開まで。個人開発ならではのスピード感と課題解決のプロセスを詳しく解説します。</p>
+                
+                <div class="article-meta-header">
+                    <div class="author-section">
+                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar-large">
+                        <div class="author-info-detailed">
+                            <h3 class="author-name">竹内 音碧</h3>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="article-stats">
+                        <div class="stat-item">
+                            <i class="far fa-calendar"></i>
+                            <span>2024年3月15日</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-clock"></i>
+                            <span>8分で読める</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-eye"></i>
+                            <span>1,234 views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 記事本文 -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-layout">
+                <main class="article-main">
+                    <!-- 記事画像 -->
+                    <div class="article-featured-image">
+                        <img src="img/会社イメージ５.png" alt="個人開発の経験談" class="featured-img">
+                        <div class="image-caption">個人開発で7つのアプリをリリースするまでの道のり</div>
+                    </div>
+
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h3><i class="fas fa-list"></i> 目次</h3>
+                        <ol>
+                            <li><a href="#introduction">はじめに</a></li>
+                            <li><a href="#motivation">個人開発を始めたきっかけ</a></li>
+                            <li><a href="#first-app">初めてのアプリ開発</a></li>
+                            <li><a href="#challenges">直面した課題と解決策</a></li>
+                            <li><a href="#app-portfolio">7つのアプリ紹介</a></li>
+                            <li><a href="#lessons-learned">学んだこと・失敗談</a></li>
+                            <li><a href="#future">今後の展望</a></li>
+                            <li><a href="#conclusion">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- 記事本文 -->
+                    <div class="article-body">
+                        <section id="introduction">
+                            <h2>はじめに</h2>
+                            <p>こんにちは、TOOOAの竹内です。今回は、個人開発でiOSアプリを7つリリースするまでの経験談をお話しします。プログラミング初心者から始まり、App Storeで実際にアプリを公開するまでの道のりは決して平坦ではありませんでしたが、多くの学びと成長がありました。</p>
+                            
+                            <p>この記事では、技術的な詳細だけでなく、個人開発者として直面した課題や、それをどう乗り越えたかについても詳しく解説していきます。これから個人開発を始めようと考えている方の参考になれば幸いです。</p>
+                        </section>
+
+                        <section id="motivation">
+                            <h2>個人開発を始めたきっかけ</h2>
+                            <p>私が個人開発を始めたきっかけは、大学での語学学習でした。中国語、韓国語、スペイン語など複数の言語を学ぶ中で、「もっと効率的に単語を覚える方法はないか」と考えるようになりました。</p>
+                            
+                            <blockquote class="quote">
+                                <p>「既存の語学学習アプリは機能が多すぎて、シンプルに単語を覚えたい時には使いづらい」</p>
+                                <cite>— 開発当時の私の思い</cite>
+                            </blockquote>
+                            
+                            <p>市場にある語学学習アプリを調査した結果、以下のような課題を発見しました：</p>
+                            
+                            <ul>
+                                <li>機能が多すぎて初心者には複雑</li>
+                                <li>オフラインで使えないものが多い</li>
+                                <li>特定の言語に特化したアプリが少ない</li>
+                                <li>シンプルな単語帳機能だけが欲しい</li>
+                            </ul>
+                            
+                            <p>これらの課題を解決するため、「シンプルで使いやすい単語帳アプリ」の開発を決意しました。</p>
+                        </section>
+
+                        <section id="first-app">
+                            <h2>初めてのアプリ開発</h2>
+                            <h3>技術選択の理由</h3>
+                            <p>初めてのアプリ開発では、以下の理由でiOS（Swift）を選択しました：</p>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-lightbulb"></i> iOS開発を選んだ理由</h4>
+                                <ul>
+                                    <li><strong>開発環境の統一性</strong>：Xcodeですべて完結</li>
+                                    <li><strong>審査プロセス</strong>：品質の高いアプリが求められる</li>
+                                    <li><strong>収益性</strong>：有料アプリでも購入されやすい</li>
+                                    <li><strong>学習リソース</strong>：日本語の情報が豊富</li>
+                                </ul>
+                            </div>
+
+                            <h3>開発プロセス</h3>
+                            <p>最初のアプリ「中国語単語帳500」の開発は、以下のステップで進めました：</p>
+
+                            <ol>
+                                <li><strong>企画・設計（2週間）</strong>
+                                    <ul>
+                                        <li>ユーザーストーリーの作成</li>
+                                        <li>画面遷移図の作成</li>
+                                        <li>データベース設計</li>
+                                    </ul>
+                                </li>
+                                <li><strong>プロトタイプ開発（1週間）</strong>
+                                    <ul>
+                                        <li>基本的なUI実装</li>
+                                        <li>データ表示機能</li>
+                                        <li>ナビゲーション実装</li>
+                                    </ul>
+                                </li>
+                                <li><strong>機能実装（3週間）</strong>
+                                    <ul>
+                                        <li>単語データの管理</li>
+                                        <li>クイズ機能</li>
+                                        <li>音声再生機能</li>
+                                        <li>学習進捗管理</li>
+                                    </ul>
+                                </li>
+                                <li><strong>テスト・デバッグ（1週間）</strong></li>
+                                <li><strong>App Store申請（1週間）</strong></li>
+                            </ol>
+
+                            
+                        </section>
+
+                        <section id="challenges">
+                            <h2>直面した課題と解決策</h2>
+                            
+                            <h3>1. App Store審査での却下</h3>
+                            <p>最初のアプリは、審査で2回却下されました。主な理由は以下の通りです：</p>
+                            
+                            <div class="warning-box">
+                                <h4><i class="fas fa-exclamation-triangle"></i> 却下理由と対策</h4>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>却下理由</th>
+                                            <th>対策</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>メタデータの不備</td>
+                                            <td>スクリーンショットとアプリ説明文の改善</td>
+                                        </tr>
+                                        <tr>
+                                            <td>クラッシュバグ</td>
+                                            <td>例外処理の追加とテストケース拡充</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ユーザビリティの問題</td>
+                                            <td>初回起動時のチュートリアル追加</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>2. ユーザーフィードバックへの対応</h3>
+                            <p>アプリリリース後、ユーザーから様々なフィードバックをいただきました：</p>
+                            
+                            <div class="feedback-section">
+                                <div class="feedback-item positive">
+                                    <h4><i class="fas fa-thumbs-up"></i> ポジティブなフィードバック</h4>
+                                    <ul>
+                                        <li>「シンプルで使いやすい」</li>
+                                        <li>「オフラインで使えるのが便利」</li>
+                                        <li>「音声機能が学習に役立つ」</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="feedback-item negative">
+                                    <h4><i class="fas fa-thumbs-down"></i> 改善要望</h4>
+                                    <ul>
+                                        <li>「もっと多くの単語を追加してほしい」</li>
+                                        <li>「学習進捗をグラフで見たい」</li>
+                                        <li>「間違えた単語だけ復習したい」</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>3. 継続的な改善とアップデート</h3>
+                            <p>ユーザーフィードバックを基に、定期的なアップデートを実施しました：</p>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v1.0</div>
+                                    <div class="timeline-content">
+                                        <h4>初回リリース</h4>
+                                        <p>基本的な単語帳機能、500語収録</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v1.1</div>
+                                    <div class="timeline-content">
+                                        <h4>学習進捗機能追加</h4>
+                                        <p>学習状況の可視化、復習機能</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">v1.2</div>
+                                    <div class="timeline-content">
+                                        <h4>UI/UX改善</h4>
+                                        <p>ダークモード対応、アニメーション追加</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="app-portfolio">
+                            <h2>7つのアプリ紹介</h2>
+                            <p>現在までにリリースした7つのアプリをご紹介します：</p>
+                            <ul class="app-list-compact">
+                                <li>中国語単語帳500（HSK対応・音声付き）</li>
+                                <li>韓国語単語帳500（TOPIK対応）</li>
+                                <li>スペイン語単語帳500（DELE対応）</li>
+                                <li>フランス語単語帳</li>
+                                <li>タイ語単語帳500</li>
+                                <li>ドイツ語単語帳500</li>
+                                <li>オフラインゲーム集</li>
+                            </ul>
+                        </section>
+
+                        <section id="lessons-learned">
+                            <h2>学んだこと・失敗談</h2>
+                            <ul class="bullet-list">
+                                <li><strong>コード品質:</strong> 保守性・再利用性を考えた設計の重要性を痛感</li>
+                                <li><strong>データ管理:</strong> Core Dataの設計とパフォーマンス最適化</li>
+                                <li><strong>UI/UX:</strong> 継続利用を促すシンプル設計とアクセシビリティ</li>
+                                <li><strong>テスト:</strong> 自動テスト導入とクラッシュレポートによる改善サイクル</li>
+                                <li><strong>失敗談:</strong> 多機能化での複雑化を反省し機能の絞り込みへ</li>
+                            </ul>
+                        </section>
+
+                        <section id="future">
+                            <h2>今後の展望</h2>
+                            <ol class="plan-list">
+                                <li><strong>新技術:</strong> SwiftUI・機械学習・ARの実装研究</li>
+                                <li><strong>発信・連携:</strong> ブログ・勉強会・OSS での知見共有</li>
+                                <li><strong>グローバル:</strong> 多言語対応強化と現地リサーチ</li>
+                            </ol>
+                        </section>
+
+                        <section id="conclusion">
+                            <h2>まとめ</h2>
+                            <p>個人開発でiOSアプリを7つリリースするまでの道のりは、技術的な挑戦だけでなく、ビジネス面での学びも多い貴重な経験でした。</p>
+                            
+                            <div class="key-takeaways">
+                                <h3><i class="fas fa-key"></i> 重要なポイント</h3>
+                                <ol>
+                                    <li><strong>ユーザー目線での開発</strong>：自分が欲しいものを作ることから始める</li>
+                                    <li><strong>シンプルさの追求</strong>：機能を絞り込み、使いやすさを重視する</li>
+                                    <li><strong>継続的な改善</strong>：リリース後も定期的なアップデートを行う</li>
+                                    <li><strong>フィードバックの活用</strong>：ユーザーの声を真摯に受け止める</li>
+                                    <li><strong>技術への投資</strong>：新しい技術を学び続ける</li>
+                                </ol>
+                            </div>
+                            
+                            <p>これから個人開発を始める方へのアドバイスとして、「完璧を求めすぎず、まずは小さく始めること」をお勧めします。最初のアプリは完璧でなくても構いません。リリースして、ユーザーの反応を見ながら改善していくことが重要です。</p>
+                            
+                            <p>個人開発は決して楽な道ではありませんが、自分のアイデアを形にし、多くの人に使ってもらえる喜びは何物にも代えがたいものです。皆さんも是非、個人開発の世界に挑戦してみてください。</p>
+                        </section>
+                    </div>
+
+                    <!-- 記事下部のアクション -->
+                    <div class="article-actions">
+                        <div class="social-share">
+                            <h4>この記事をシェア</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                                <button class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</button>
+                                <button class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                                <button class="share-btn copy"><i class="fas fa-link"></i> リンクをコピー</button>
+                            </div>
+                        </div>
+                        
+                        <div class="article-rating">
+                            <h4>この記事は役に立ちましたか？</h4>
+                            <div class="rating-buttons">
+                                <button class="rating-btn helpful"><i class="fas fa-thumbs-up"></i> 役に立った</button>
+                                <button class="rating-btn not-helpful"><i class="fas fa-thumbs-down"></i> 改善が必要</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 関連記事 -->
+                    <div class="related-articles">
+                        <h3>関連記事</h3>
+                        <div class="related-grid">
+                            <a href="blog-article-thai.html" class="related-item">
+                                <img src="img/blog.thai.発表.jpeg" alt="タイ留学でのローカライゼーション" class="related-img">
+                                <div class="related-content">
+                                    <h4>タイ留学で学んだアプリ開発とローカライゼーション</h4>
+                                    <p>現地体験から見えた、グローバル展開成功の鍵</p>
+                                    <span class="related-date">2025年3月15日</span>
+                                </div>
+                            </a>
+                            
+                            <a href="blog-article-qualification.html" class="related-item">
+                                <img src="img/blog.qualification1.jpeg" alt="資格取得体験" class="related-img">
+                                <div class="related-content">
+                                    <h4>私の資格取得体験</h4>
+                                    <p>効率的な学習方法で広がる可能性</p>
+                                    <span class="related-date">2024年8月19日</span>
+                                </div>
+                            </a>
+                            
+                            <article class="related-item">
+                                <img src="img/appaikon.中国語単語帳.jpg" alt="UI/UX設計" class="related-img">
+                                <div class="related-content">
+                                    <h4>語学学習アプリのUI/UX設計で重視したポイント</h4>
+                                    <p>ユーザーが継続して学習できるインターフェース設計について</p>
+                                    <span class="related-date">2024年3月5日</span>
+                                </div>
+                            </article>
+                            
+                            <article class="related-item">
+                                <img src="img/会社イメージ３.png" alt="Swift開発" class="related-img">
+                                <div class="related-content">
+                                    <h4>SwiftでのiOSアプリ開発：効率的なコーディング手法</h4>
+                                    <p>Swift言語を使った効率的な開発手法とベストプラクティス</p>
+                                    <span class="related-date">2024年2月28日</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- サイドバー -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget author-widget-simple">
+                        <h4>著者について</h4>
+                        <div class="author-simple">
+                            <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-photo">
+                            <h5 class="author-name">竹内 音碧</h5>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。語学学習とゲームの力で、ユーザーの時間価値を高めることを目指している。</p>
+                            <div class="author-links">
+                                <a href="https://github.com/oto0928" class="author-link">GitHub</a>
+                                <a href="#" class="author-link">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget toc-widget">
+                        <h4>目次</h4>
+                        <nav class="toc-nav">
+                            <ul>
+                                <li><a href="#introduction">はじめに</a></li>
+                                <li><a href="#motivation">個人開発を始めたきっかけ</a></li>
+                                <li><a href="#first-app">初めてのアプリ開発</a></li>
+                                <li><a href="#challenges">直面した課題と解決策</a></li>
+                                <li><a href="#app-portfolio">7つのアプリ紹介</a></li>
+                                <li><a href="#lessons-learned">学んだこと・失敗談</a></li>
+                                <li><a href="#future">今後の展望</a></li>
+                                <li><a href="#conclusion">まとめ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="sidebar-widget newsletter-widget">
+                        <h4>最新記事をお届け</h4>
+                        <p>新しい記事が公開されたらメールでお知らせします</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="メールアドレス" required>
+                            <button type="submit" class="btn btn-primary">購読する</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <img src="img/TOOOA.png" alt="TOOOA" class="footer-logo">
+                        <span class="footer-logo-text">TOOOA Co., Ltd.</span>
+                    </div>
+                    <p>東亜から世界へ。アプリで未来をつくる。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#member">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOOOA. All rights reserved.</p>
+                <a href="#" class="privacy-link">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+    <script src="blog-article.js"></script>
+</body>
+</html>

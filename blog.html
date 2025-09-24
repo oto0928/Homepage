@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - TOOOA Co., Ltd.</title>
-    <link rel="icon" type="image/png" href="img/TOOOA.png">
-    <link rel="shortcut icon" type="image/png" href="img/TOOOA.png">
-    <link rel="apple-touch-icon" href="img/TOOOA.png">
+    <link rel="icon" type="image/png" href="img/fabikon.png">
+    <link rel="shortcut icon" type="image/png" href="img/fabikon.png">
+    <link rel="apple-touch-icon" href="img/fabikon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -71,6 +71,8 @@
                     <button class="filter-btn" data-category="development">開発ノウハウ</button>
                     <button class="filter-btn" data-category="tech">技術</button>
                     <button class="filter-btn" data-category="design">UI/UX</button>
+                    <button class="filter-btn" data-category="learning">学習・成長</button>
+                    <button class="filter-btn" data-category="adventure">アドベンチャー</button>
                     <button class="filter-btn" data-category="game">ゲーム開発</button>
                     <button class="filter-btn" data-category="news">お知らせ</button>
                 </div>
@@ -88,7 +90,7 @@
             <div class="blog-layout">
                 <main class="blog-articles">
                     <!-- フィーチャード記事 -->
-                    <a href="thai-blog-article.html" class="article-link">
+                    <a href="blog-article-thai.html" class="article-link">
                         <article class="article-card featured" data-category="development international">
                             <div class="article-image">
                                 <img src="img/blog.thai.発表.jpeg" alt="タイでのプレゼンテーション" class="article-img">
@@ -116,6 +118,86 @@
                     </a>
 
                     <!-- 通常記事 -->
+                    <a href="blog-article-huzisan.html" class="article-link">
+                        <article class="article-card" data-category="adventure">
+                            <div class="article-image">
+                                <img src="img/blog.huzisan.touchou.jpeg" alt="富士山登頂の様子" class="article-img">
+                                <div class="article-category">アドベンチャー</div>
+                                <div class="read-time">3分で読める</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>弾丸富士山タイムアタック！</h3>
+                                <p>6時間10分で剣ヶ峰に到達した登山記録。計画から3日の弾丸スケジュールで挑んだ富士山登山の体験談と教訓をお伝えします。</p>
+                                <div class="article-meta">
+                                    <div class="author-info">
+                                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                        <div class="author-details">
+                                            <span class="author-name">竹内 音碧</span>
+                                            <span class="publish-date">2025年8月29日</span>
+                                        </div>
+                                    </div>
+                                    <div class="article-actions">
+                                        <button class="like-btn"><i class="far fa-heart"></i> 28</button>
+                                        <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="blog-article-qualification.html" class="article-link">
+                        <article class="article-card" data-category="learning growth">
+                            <div class="article-image">
+                                <img src="img/blog.qualification1.jpeg" alt="資格取得の学習風景" class="article-img">
+                                <div class="article-category">学習・成長</div>
+                                <div class="read-time">3分で読める</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>私の資格取得体験</h3>
+                                <p>大学受験を通して学ぶことの楽しさに気づき、効率的な学習方法で複数の資格を取得した体験談。基本情報技術者、簿記2級など。</p>
+                                <div class="article-meta">
+                                    <div class="author-info">
+                                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                        <div class="author-details">
+                                            <span class="author-name">竹内 音碧</span>
+                                            <span class="publish-date">2024年8月19日</span>
+                                        </div>
+                                    </div>
+                                    <div class="article-actions">
+                                        <button class="like-btn"><i class="far fa-heart"></i> 15</button>
+                                        <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <a href="blog-article-lessons-apps.html" class="article-link">
+                        <article class="article-card" data-category="development">
+                            <div class="article-image">
+                                <img src="img/会社イメージ５.png" alt="個人開発の経験談" class="article-img">
+                                <div class="article-category">開発ノウハウ</div>
+                                <div class="read-time">8分で読める</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>個人開発でiOSアプリを7つリリースした経験談</h3>
+                                <p>語学学習アプリの企画から開発、App Store公開までのプロセスと学び。</p>
+                                <div class="article-meta">
+                                    <div class="author-info">
+                                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar">
+                                        <div class="author-details">
+                                            <span class="author-name">竹内 音碧</span>
+                                            <span class="publish-date">2025年2月28日</span>
+                                        </div>
+                                    </div>
+                                    <div class="article-actions">
+                                        <button class="like-btn"><i class="far fa-heart"></i> 42</button>
+                                        <button class="share-btn"><i class="fas fa-share"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
                     <article class="article-card" data-category="tech">
                         <div class="article-image">
                             <img src="img/タイでの活動１.jpeg" alt="タイでの開発活動" class="article-img">
@@ -312,6 +394,15 @@
                         <h4>人気記事</h4>
                         <div class="popular-posts">
                             <div class="popular-post">
+                                <a href="blog-article-huzisan.html" class="popular-link">
+                                    <img src="img/blog.huzisan.touchou.jpeg" alt="富士山登頂" class="popular-img">
+                                    <div class="popular-content">
+                                        <h5>弾丸富士山タイムアタック！</h5>
+                                        <span class="popular-views">142 views</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="popular-post">
                                 <img src="img/appaikon.中国語単語帳.jpg" alt="UI/UX設計" class="popular-img">
                                 <div class="popular-content">
                                     <h5>語学学習アプリのUI/UX設計で重視したポイント</h5>
@@ -319,20 +410,13 @@
                                 </div>
                             </div>
                             <div class="popular-post">
-                                <a href="thai-blog-article.html" class="popular-link">
+                                <a href="blog-article-thai.html" class="popular-link">
                                     <img src="img/blog.thai.発表.jpeg" alt="タイ留学" class="popular-img">
                                     <div class="popular-content">
                                         <h5>タイ留学で学んだアプリ開発とローカライゼーション</h5>
                                         <span class="popular-views">127 views</span>
                                     </div>
                                 </a>
-                            </div>
-                            <div class="popular-post">
-                                <img src="img/appaikon.オフラインゲーム集.jpg" alt="ゲーム開発" class="popular-img">
-                                <div class="popular-content">
-                                    <h5>オフラインゲームの魅力と開発のポイント</h5>
-                                    <span class="popular-views">756 views</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,6 +429,10 @@
                             <span class="tag">UI/UX</span>
                             <span class="tag">個人開発</span>
                             <span class="tag">語学学習</span>
+                            <span class="tag">富士山</span>
+                            <span class="tag">登山</span>
+                            <span class="tag">資格取得</span>
+                            <span class="tag">学習法</span>
                             <span class="tag">ゲーム開発</span>
                             <span class="tag">App Store</span>
                             <span class="tag">ASO</span>

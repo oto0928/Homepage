@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弾丸富士山タイムアタック！ - TOOOA Blog</title>
+    <meta name="description" content="2025年8月28日に富士山に一人登山し、6時間10分で剣ヶ峰に到達した体験談。弾丸スケジュールとその教訓をお伝えします。">
+    <link rel="icon" type="image/png" href="img/fabikon.png">
+    <link rel="shortcut icon" type="image/png" href="img/fabikon.png">
+    <link rel="apple-touch-icon" href="img/fabikon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-page.css">
+    <link rel="stylesheet" href="blog-article-huzisan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/TOOOA.png" alt="TOOOA" class="logo-img">
+                    <span class="logo-text">TOOOA Co., Ltd.</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#member">Team</a></li>
+                <li><a href="index.html#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- パンくずナビ -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><span>弾丸富士山タイムアタック！</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <section class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <div class="article-category-badge">アドベンチャー</div>
+                <h1 class="article-title">弾丸富士山タイムアタック！</h1>
+                <p class="article-subtitle">6時間10分で剣ヶ峰に到達した登山記録</p>
+                
+                <div class="article-meta-header">
+                    <div class="author-section">
+                        <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-avatar-large">
+                        <div class="author-info-detailed">
+                            <h3 class="author-name">竹内 音碧</h3>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="article-stats">
+                        <div class="stat-item">
+                            <i class="far fa-calendar"></i>
+                            <span>2025年8月29日</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-clock"></i>
+                            <span>3分で読める</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="far fa-eye"></i>
+                            <span>156 views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 記事本文 -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-layout">
+                <main class="article-main">
+                    <!-- 記事画像 -->
+                    <div class="article-featured-image">
+                        <img src="img/blog.huzisan.touchou.jpeg" alt="富士山登頂の様子" class="featured-img">
+                        <div class="image-caption">剣ヶ峰（3776m）登頂達成！</div>
+                    </div>
+
+                    <!-- 目次 -->
+                    <div class="table-of-contents">
+                        <h3><i class="fas fa-list"></i> 目次</h3>
+                        <ol>
+                            <li><a href="#introduction">はじめに</a></li>
+                            <li><a href="#basic-info">富士山登山の基礎情報</a></li>
+                            <li><a href="#schedule">弾丸スケジュールの始まり</a></li>
+                            <li><a href="#five-station-view">五合目からの景色</a></li>
+                            <li><a href="#highlight">登山のハイライト</a></li>
+                            <li><a href="#last-spurt">トラウマ級のラストスパート</a></li>
+                            <li><a href="#goal">ゴール！剣ヶ峰に到達</a></li>
+                            <li><a href="#lessons">富士山弾丸登山の教訓</a></li>
+                            <li><a href="#onsen">ふじやま温泉</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ol>
+                    </div>
+
+                    <!-- 記事本文 -->
+                    <div class="article-body">
+                        <section id="introduction">
+                            <h2>はじめに</h2>
+                            <p>2025年8月28日、ついに日本最高峰・富士山に一人登山してきました！計画から登頂までわずか3日、バイク移動＋バス＋徹夜という弾丸スケジュールで挑んだ結果、なんと6時間10分で剣ヶ峰（3776m）に到達！</p>
+                            
+                            <p>今回はその体験談と、これから富士山に挑戦したい人のための教訓をお伝えします。弾丸登山の過酷さと達成感、そして学んだことを包み隠さずお話しします。</p>
+                        </section>
+
+                        <section id="basic-info">
+                            <h2>富士山登山の基礎情報</h2>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-mountain"></i> 富士山登山の基本データ</h4>
+                                <ul>
+                                    <li><strong>登山口:</strong> 基本は富士山五合目（標高2305m）</li>
+                                    <li><strong>登山可能期間:</strong> 2025年は 7/10～9/10</li>
+                                    <li><strong>マイカー規制:</strong> 登山期間中は五合目まで車で行けません</li>
+                                    <li><strong>環境保全協力金:</strong> 今年から4000円が必要（2年前は無料だったのでちょっと悔しい…！）</li>
+                                </ul>
+                            </div>
+
+                            <div class="access-info">
+                                <h3>アクセス方法</h3>
+                                <p>今回は「富士山パーキング」にバイクを停め、往復バス（3000円）でアクセスしました。マイカー規制期間中は、このバスが五合目への唯一の交通手段となります。</p>
+                            </div>
+                        </section>
+
+                        <section id="schedule">
+                            <h2>弾丸スケジュールの始まり</h2>
+                            
+                            <div class="timeline-schedule">
+                                <div class="schedule-item">
+                                    <div class="schedule-time">3:00</div>
+                                    <div class="schedule-event">
+                                        <h4>自宅出発（同士道経由）</h4>
+                                        <p>徹夜明けでバイクスタート。眠気と戦いながらの出発</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">4:50</div>
+                                    <div class="schedule-event">
+                                        <h4>富士山パーキング到着</h4>
+                                        <p>バイクを駐車場に停めて、始発バスを待機</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">5:00</div>
+                                    <div class="schedule-event">
+                                        <h4>始発バスに乗車</h4>
+                                        <p>他の登山者たちと一緒にバスで五合目へ</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">5:45</div>
+                                    <div class="schedule-event">
+                                        <h4>五合目到着</h4>
+                                        <p>標高2305m、すでに雲の上の世界</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item highlight">
+                                    <div class="schedule-time">6:00</div>
+                                    <div class="schedule-event">
+                                        <h4>登山開始</h4>
+                                        <p>ついに富士山登山スタート！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="five-station-view">
+                            <h2>五合目からの景色</h2>
+                            
+                            <div class="scenic-view">
+                                <img src="img/blog.huzisan1.jpeg" alt="五合目からの雲海" class="scenic-image">
+                                <div class="scenic-caption">
+                                    <p>夜明けの雲海はすでに絶景。五合目でも十分に「雲の上の世界」です。</p>
+                                    <p>標高2305mから見る朝焼けは、これから始まる冒険への期待を高めてくれました。</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="highlight">
+                            <h2>登山のハイライト</h2>
+                            
+                            <div class="climbing-stages">
+                                <div class="stage-card">
+                                    <div class="stage-header">
+                                        <h3>6～7合目</h3>
+                                        <span class="elevation">標高2700m</span>
+                                    </div>
+                                    <div class="stage-content">
+                                        <p>森林限界を抜け、木々が消えて岩と砂の世界に。6合目はスルーしてしまい、気づけば7合目へ。</p>
+                                        <div class="time-record">
+                                            <i class="fas fa-stopwatch"></i>
+                                            <span>時刻: 6:50（通常95分→50分程度）</span>
+                                        </div>
+                                        <p class="pace-note">なかなかいいペース！</p>
+                                    </div>
+                                </div>
+
+                                <div class="stage-card incident">
+                                    <div class="stage-header">
+                                        <h3>サングラス事件</h3>
+                                        <span class="warning">⚠️ 問題発生</span>
+                                    </div>
+                                    <div class="stage-content">
+                                        <img src="img/blog.huzisan.sangurasu.jpeg" alt="壊れたサングラス" class="incident-image">
+                                        <p>タイで買ったサングラスが壊れ、目が焼かれるように痛い。日差し対策は必須です。</p>
+                                        <div class="lesson-note">
+                                            <strong>教訓:</strong> 品質の良いサングラスを持参すべし！
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="stage-card challenging">
+                                    <div class="stage-header">
+                                        <h3>8合目～本8合目</h3>
+                                        <span class="difficulty">高難易度</span>
+                                    </div>
+                                    <div class="stage-content">
+                                        <p>本格的なロッククライミング状態。大岩が続き、息も切れ始める。</p>
+                                        <div class="health-warning">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <span>本8合目で高山病（頭痛・息切れ）が出現</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="climbing-gallery">
+                                <div class="gallery-item">
+                                    <img src="img/blog.huzisan2.jpeg" alt="登山中の様子" class="gallery-image">
+                                    <div class="gallery-caption">岩場での登山の様子</div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="img/blog.huzisan3.jpeg" alt="富士山の景色" class="gallery-image">
+                                    <div class="gallery-caption">標高が上がるにつれて変わる景色</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="last-spurt">
+                            <h2>トラウマ級のラストスパート</h2>
+                            
+                            <div class="final-push">
+                                <div class="push-content">
+                                    <p>高山病に耐えながら、8.5合目 → 9合目 → 山頂へ！しかしここで衝撃の事実が判明...</p>
+                                    
+                                    <div class="shock-revelation">
+                                        <h3>「山頂」はゴールではなかった...！</h3>
+                                        <p>富士山の真の最高地点は、<strong>剣ヶ峰（3776m）</strong>。火口を囲むように歩き、さらに40分かけて登頂する必要があります。</p>
+                                    </div>
+                                    
+                                    <div class="crater-walk">
+                                        <img src="img/blog.huzisan4.jpeg" alt="火口周辺の様子" class="crater-image">
+                                        <p>火口を囲む道のりは想像以上に過酷でした...</p>
+                                    </div>
+                                </div>
+            </div>
+                        </section>
+
+                        <section id="goal">
+                            <h2>ゴール！剣ヶ峰に到達</h2>
+                            
+                            <div class="achievement-card">
+                                <div class="achievement-header">
+                                    <i class="fas fa-trophy"></i>
+                                    <h3>登頂達成！</h3>
+                                </div>
+                                <div class="achievement-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">登山時間</span>
+                                        <span class="stat-value">6時間11分</span>
+                                        <span class="stat-detail">（五合目 → 剣ヶ峰、休憩含む）</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">標高</span>
+                                        <span class="stat-value">3776m</span>
+                                        <span class="stat-detail">日本最高峰</span>
+                                    </div>
+                                </div>
+                                <p class="achievement-feeling">達成感は最高！しかし高山病と疲労で、帰り道の記憶は曖昧です（笑）。</p>
+                            </div>
+                        </section>
+
+                        <section id="lessons">
+                            <h2>富士山弾丸登山の教訓</h2>
+                            
+                            <div class="lessons-grid">
+                                <div class="lesson-card critical">
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-lungs"></i>
+                                    </div>
+                                    <h4>高山病対策は必須！</h4>
+                                    <p>水分・休憩・酸素缶（←これ買ったほうがいい！五合目で1100円で売ってます！）など準備を。</p>
+                                </div>
+
+                                <div class="lesson-card important">
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <h4>日差し対策は万全に</h4>
+                                    <p>サングラス・帽子・日焼け止めは必須アイテム。特にサングラスは品質の良いものを！</p>
+                                </div>
+
+                                <div class="lesson-card timing">
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h4>剣ヶ峰まで時間に余裕を</h4>
+                                    <p>山頂＝ゴールではない！剣ヶ峰まで片道+40分は覚悟が必要。</p>
+                                </div>
+
+                                <div class="lesson-card recommendation">
+                                    <div class="lesson-icon">
+                                        <i class="fas fa-bed"></i>
+                                    </div>
+                                    <h4>弾丸より一泊登山がオススメ</h4>
+                                    <p>ご来光をゆっくり眺め、体調を整えながら登る方が安全で楽しめます。</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="onsen">
+                            <h2>ふじやま温泉</h2>
+                            
+                            <div class="onsen-experience">
+                                <img src="img/blog.huzisan.onnsen.jpeg" alt="ふじやま温泉" class="onsen-image">
+                                <div class="onsen-content">
+                                    <h3>登山後の至福のひととき</h3>
+                                    <p>温泉で疲れを癒し、次の冒険に備えました。富士山登山の後の温泉は格別です！</p>
+                                    <p>筋肉痛と高山病の症状も、温泉の力で和らぎました。登山後の温泉は必須ですね。</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="summary">
+                            <h2>まとめ</h2>
+                            
+                            <div class="summary-content">
+                                <p>計画から3日で挑んだ弾丸富士山登山。過酷だったけれど、最高の達成感と絶景が待っていました。帰りには近くの温泉にも入って最高！！</p>
+                                
+                                <div class="final-message">
+                                    <h3><i class="fas fa-heart"></i> これから登る方へ</h3>
+                                    <p>ぜひ余裕ある計画で、安全第一で挑戦してください。富士山は逃げません。しっかりと準備をして、素晴らしい体験を楽しんでください！</p>
+                                </div>
+
+                                <div class="adventure-stats">
+                                    <div class="stat-box">
+                                        <span class="stat-number">6時間11分</span>
+                                        <span class="stat-label">登頂時間</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-number">3776m</span>
+                                        <span class="stat-label">到達標高</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-number">3日</span>
+                                        <span class="stat-label">計画期間</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- 記事下部のアクション -->
+                    <div class="article-actions">
+                        <div class="social-share">
+                            <h4>この記事をシェア</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</button>
+                                <button class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</button>
+                                <button class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</button>
+                                <button class="share-btn copy"><i class="fas fa-link"></i> リンクをコピー</button>
+                            </div>
+                        </div>
+                        
+                        <div class="article-rating">
+                            <h4>この記事は役に立ちましたか？</h4>
+                            <div class="rating-buttons">
+                                <button class="rating-btn helpful"><i class="fas fa-thumbs-up"></i> 役に立った</button>
+                                <button class="rating-btn not-helpful"><i class="fas fa-thumbs-down"></i> 改善が必要</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 関連記事 -->
+                    <div class="related-articles">
+                        <h3>関連記事</h3>
+                        <div class="related-grid">
+                            <a href="blog-article-qualification.html" class="related-item">
+                                <img src="img/blog.qualification1.jpeg" alt="資格取得体験" class="related-img">
+                                <div class="related-content">
+                                    <h4>私の資格取得体験</h4>
+                                    <p>効率的な学習方法で広がる可能性</p>
+                                    <span class="related-date">2024年8月19日</span>
+                                </div>
+                            </a>
+                            
+                            <a href="blog-article-thai.html" class="related-item">
+                                <img src="img/blog.thai.発表.jpeg" alt="タイ留学でのローカライゼーション" class="related-img">
+                                <div class="related-content">
+                                    <h4>タイ留学で学んだアプリ開発とローカライゼーション</h4>
+                                    <p>現地体験から見えた、グローバル展開成功の鍵</p>
+                                    <span class="related-date">2025年3月15日</span>
+                                </div>
+                            </a>
+                            
+                            <a href="blog-article-lessons-apps.html" class="related-item">
+                                <img src="img/会社イメージ５.png" alt="個人開発の経験談" class="related-img">
+                                <div class="related-content">
+                                    <h4>個人開発でiOSアプリを7つリリースした経験談</h4>
+                                    <p>語学学習アプリの企画から開発、App Store公開まで</p>
+                                    <span class="related-date">2025年2月28日</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- サイドバー -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-widget author-widget-simple">
+                        <h4>著者について</h4>
+                        <div class="author-simple">
+                            <img src="img/代表の写真.jpeg" alt="竹内 音碧" class="author-photo">
+                            <h5 class="author-name">竹内 音碧</h5>
+                            <p class="author-title">Founder & App Developer</p>
+                            <p class="author-bio">早稲田大学 人間科学部 人間情報学科。個人開発で7つのiOSアプリをリリース。語学学習とゲームの力で、ユーザーの時間価値を高めることを目指している。</p>
+                            <div class="author-links">
+                                <a href="https://github.com/oto0928" class="author-link">GitHub</a>
+                                <a href="#" class="author-link">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget toc-widget">
+                        <h4>目次</h4>
+                        <nav class="toc-nav">
+                            <ul>
+                                <li><a href="#introduction">はじめに</a></li>
+                                <li><a href="#basic-info">富士山登山の基礎情報</a></li>
+                                <li><a href="#schedule">弾丸スケジュールの始まり</a></li>
+                                <li><a href="#five-station-view">五合目からの景色</a></li>
+                                <li><a href="#highlight">登山のハイライト</a></li>
+                                <li><a href="#last-spurt">トラウマ級のラストスパート</a></li>
+                                <li><a href="#goal">ゴール！剣ヶ峰に到達</a></li>
+                                <li><a href="#lessons">富士山弾丸登山の教訓</a></li>
+                                <li><a href="#onsen">ふじやま温泉</a></li>
+                                <li><a href="#summary">まとめ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="sidebar-widget newsletter-widget">
+                        <h4>最新記事をお届け</h4>
+                        <p>新しい記事が公開されたらメールでお知らせします</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="メールアドレス" required>
+                            <button type="submit" class="btn btn-primary">購読する</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo-container">
+                        <a href="index.html">
+                            <img src="img/TOOOA.png" alt="TOOOA" class="footer-logo">
+                            <span class="footer-logo-text">TOOOA Co., Ltd.</span>
+                        </a>
+                    </div>
+                    <p>東亜から世界へ。アプリで未来をつくる。</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#member">Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@%E9%9F%B3-v2w" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/toa050928/?locale=ja_JP" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/oto0928" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOOOA. All rights reserved.</p>
+                <a href="#" class="privacy-link">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+    <script src="blog-article.js"></script>
+</body>
+</html>
