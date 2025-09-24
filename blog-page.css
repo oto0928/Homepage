@@ -552,6 +552,11 @@
         font-size: 2rem;
     }
 
+    .blog-filters {
+        position: static;
+        top: auto;
+    }
+
     .filters-container {
         flex-direction: column;
         gap: 1.5rem;
