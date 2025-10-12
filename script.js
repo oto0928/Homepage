@@ -157,8 +157,6 @@ class TypeWriter {
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // フォームデータの取得
         const formData = new FormData(this);
         const name = formData.get('name');
@@ -169,18 +167,19 @@ if (contactForm) {
 
         // バリデーション
         if (!name || !email || !subject || !message) {
+            e.preventDefault();
             showNotification('必須項目を入力してください', 'error');
             return;
         }
 
         if (!isValidEmail(email)) {
+            e.preventDefault();
             showNotification('正しいメールアドレスを入力してください', 'error');
             return;
         }
 
-        // 送信成功のシミュレーション
-        showNotification('お問い合わせを送信しました。2営業日以内にご返信いたします。', 'success');
-        this.reset();
+        // バリデーション成功時はメール送信を実行
+        showNotification('メールアプリが開きます。送信ボタンを押してメールを送信してください。', 'success');
     });
 }
 
@@ -402,6 +401,131 @@ window.addEventListener('scroll', () => {
         requestAnimationFrame(updateScrollEffects);
         ticking = true;
     }
+});
+
+// アプリスライダー機能 - 完全リニューアル
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('app-slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('sliderDots');
+    
+    if (!slider || !prevBtn || !nextBtn || !dotsContainer) {
+        return; // スライダー要素が存在しない場合は終了
+    }
+    
+    const slides = slider.querySelectorAll('.app-slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let slidesPerView = 4; // デフォルトで4つ表示
+    
+    // レスポンシブ対応
+    function updateSlidesPerView() {
+        if (window.innerWidth <= 480) {
+            slidesPerView = 1;
+        } else if (window.innerWidth <= 768) {
+            slidesPerView = 2;
+        } else if (window.innerWidth <= 1024) {
+            slidesPerView = 3;
+        } else {
+            slidesPerView = 4;
+        }
+    }
+    
+    // ドットを生成
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        const totalPages = Math.ceil(totalSlides / slidesPerView);
+        
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+    
+    // スライダーを更新
+    function updateSlider() {
+        const slideWidth = 300 + 24; // 300px + 24px gap
+        const translateX = -(currentSlide * slideWidth * slidesPerView);
+        slider.style.transform = `translateX(${translateX}px)`;
+        
+        // ボタンの有効/無効状態を更新
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide >= Math.ceil(totalSlides / slidesPerView) - 1;
+        
+        // ドットのアクティブ状態を更新
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    // 指定したスライドに移動
+    function goToSlide(slideIndex) {
+        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        currentSlide = Math.max(0, Math.min(slideIndex, maxSlide));
+        updateSlider();
+    }
+    
+    // 前のスライド
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+        }
+    }
+    
+    // 次のスライド
+    function nextSlide() {
+        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        if (currentSlide < maxSlide) {
+            currentSlide++;
+            updateSlider();
+        }
+    }
+    
+    // イベントリスナー
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // レスポンシブ対応
+    window.addEventListener('resize', () => {
+        updateSlidesPerView();
+        createDots();
+        currentSlide = 0;
+        updateSlider();
+    });
+    
+    // 自動スライド（オプション）
+    let autoSlideInterval;
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+            if (currentSlide < maxSlide) {
+                nextSlide();
+            } else {
+                currentSlide = 0;
+                updateSlider();
+            }
+        }, 5000); // 5秒ごと
+    }
+    
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // マウスホバーで自動スライドを停止
+    slider.addEventListener('mouseenter', stopAutoSlide);
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // 初期化
+    updateSlidesPerView();
+    createDots();
+    updateSlider();
+    startAutoSlide();
 });
 
 // 初期化完了のログ

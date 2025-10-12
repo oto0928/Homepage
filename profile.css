@@ -569,7 +569,30 @@
         padding: 1.5rem;
     }
     
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        padding-left: 0;
+        align-items: stretch;
+        position: relative;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .timeline-date {
+        flex: none;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
     .timeline-content {
+        width: 100%;
         padding: 1.5rem;
     }
     
@@ -605,22 +628,25 @@
         gap: 1.5rem;
     }
     
-    .timeline-item {
-        padding-left: 40px;
+    .timeline::before {
+        display: none;
     }
     
-    .timeline::before {
-        left: 20px;
+    .timeline-item {
+        padding-left: 0;
     }
     
     .timeline-item::before {
-        left: 20px;
+        display: none;
     }
     
     .timeline-date {
-        flex: 0 0 80px;
+        flex: none;
+        width: 100%;
         font-size: 0.7rem;
         padding: 0.3rem 0.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
     }
 }
 

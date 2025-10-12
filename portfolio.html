@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - 作品集 | TOOOA Co., Ltd.</title>
+    <meta name="description" content="TOOOAの作品集。アプリ開発、Webサイト制作、その他のプロジェクトをご紹介します。">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/fabikon.png">
+    <link rel="shortcut icon" type="image/png" href="img/fabikon.png">
+    <link rel="apple-touch-icon" href="img/fabikon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="img/TOOOA.png" alt="TOOOA" class="logo-img">
+                <span class="logo-text">TOOOA Co., Ltd.</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#member">Team</a></li>
+                <li><a href="index.html#contact" class="cta-nav">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- プログレスバー -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- ヒーローセクション -->
+        <section class="portfolio-hero">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="floating-elements">
+                    <div class="float-element float-1"></div>
+                    <div class="float-element float-2"></div>
+                    <div class="float-element float-3"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Portfolio</h1>
+                        <p class="hero-subtitle">作品集</p>
+                        <p class="hero-description">
+                            アプリ開発からWebサイト制作まで、<br>
+                            技術で課題を解決するプロダクトをご紹介します。
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">9</span>
+                                <span class="stat-label">アプリ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">ダウンロード</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Webサイト</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="app-showcase">
+                            <div class="app-stack">
+                                <div class="app-icon-large">
+                                    <img src="img/appaikon.中国語単語帳.jpg" alt="中国語単語帳" class="app-img">
+                                </div>
+                                <div class="app-icon-large">
+                                    <img src="img/appaikon.TomYumKitchen.jpg" alt="韓国語単語帳" class="app-img">
+                                </div>
+                                <div class="app-icon-large">
+                                    <img src="img/appaikon.SpeedCamera.png" alt="スペイン語単語帳" class="app-img">
+                                </div>
+                                <div class="app-icon-large">
+                                    <img src="img/appaikon.オフラインゲーム集.jpg" alt="フランス語単語帳" class="app-img">
+                                </div>
+                            </div>
+                            <div class="floating-apps">
+                                <div class="floating-app floating-app-1">
+                                    <img src="img/appaikon.タイ語単語帳.jpg" alt="タイ語単語帳" class="app-img">
+                                </div>
+                                <div class="floating-app floating-app-2">
+                                    <img src="img/appaikon.ドイツ語単語帳.jpg" alt="ドイツ語単語帳" class="app-img">
+                                </div>
+                                <div class="floating-app floating-app-3">
+                                    <img src="img/appaikon.スペイン語単語帳.jpg" alt="オフラインゲーム集" class="app-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アプリ開発セクション -->
+        <section class="portfolio-section apps-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">アプリ開発</h2>
+                    <p class="section-subtitle">Mobile App Development</p>
+                    <p class="section-description">9つのアプリ、500件以上のダウンロード実績</p>
+                </div>
+                
+                <div class="apps-grid">
+                    <!-- 中国語単語帳500 -->
+                    <div class="app-card featured">
+                        <div class="app-image">
+                            <img src="img/appaikon.中国語単語帳.jpg" alt="中国語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>中国語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                HSK対応の中国語学習アプリ。500語の重要単語を効率的に学習できます。
+                                音声読み上げ機能、クイズ機能、進捗管理機能を搭載。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">音声読み上げ</span>
+                                <span class="feature-tag">クイズ機能</span>
+                                <span class="feature-tag">進捗管理</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E4%B8%AD%E5%9B%BD%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747255596" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 韓国語単語帳500 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.韓国語単語帳.jpg" alt="韓国語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>韓国語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                TOPIK対応の韓国語学習アプリ。韓国語の重要単語500語を体系的に学習。
+                                ハングルとローマ字表記、音声機能で効率的な学習をサポート。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">ハングル学習</span>
+                                <span class="feature-tag">TOPIK対応</span>
+                                <span class="feature-tag">音声機能</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E9%9F%93%E5%9B%BD%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747366808" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- スペイン語単語帳500 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.スペイン語単語帳.jpg" alt="スペイン語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>スペイン語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                DELE対応のスペイン語学習アプリ。日常会話でよく使われる500語を厳選。
+                                発音練習、文法解説、例文機能で総合的な学習をサポート。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">DELE対応</span>
+                                <span class="feature-tag">発音練習</span>
+                                <span class="feature-tag">文法解説</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747693002" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- フランス語単語帳 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.フランス語単語帳.jpg" alt="フランス語単語帳">
+                        </div>
+                        <div class="app-content">
+                            <h3>フランス語単語帳</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                DELF対応のフランス語学習アプリ。フランス語の基礎から応用まで、
+                                段階的に学習できる設計。音声と視覚で記憶に残る学習体験を提供。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">DELF対応</span>
+                                <span class="feature-tag">段階学習</span>
+                                <span class="feature-tag">音声学習</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747693002" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- タイ語単語帳500 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.タイ語単語帳.jpg" alt="タイ語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>タイ語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                実用タイ語検定対応の学習アプリ。タイ語の文字と発音を同時に学習。
+                                現地での実践的な会話に必要な単語を厳選して収録。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">実用タイ語検定</span>
+                                <span class="feature-tag">文字学習</span>
+                                <span class="feature-tag">実践会話</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%82%BF%E3%82%A4%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6745856863" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ドイツ語単語帳500 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.ドイツ語単語帳.jpg" alt="ドイツ語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>ドイツ語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                Goethe対応のドイツ語学習アプリ。ドイツ語の複雑な文法を理解しやすく
+                                解説。名詞の性別、動詞の活用なども含めた総合的な学習をサポート。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">Goethe対応</span>
+                                <span class="feature-tag">文法解説</span>
+                                <span class="feature-tag">名詞の性別</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%82%A2%E3%83%A9%E3%83%93%E3%82%A2%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747378645" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- アラビア語単語帳500 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.アラビア語単語帳.jpg" alt="アラビア語単語帳500">
+                        </div>
+                        <div class="app-content">
+                            <h3>アラビア語単語帳500</h3>
+                            <p class="app-category">語学学習アプリ</p>
+                            <p class="app-description">
+                                アラビア語の基礎単語500語を学習できるアプリ。右から左に書くアラビア文字の
+                                読み方から始まり、日常会話で使える実用的な単語を収録。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">アラビア文字</span>
+                                <span class="feature-tag">右から左</span>
+                                <span class="feature-tag">日常会話</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%82%A2%E3%83%A9%E3%83%93%E3%82%A2%E8%AA%9E%E5%8D%98%E8%AA%9E%E5%B8%B3500/id6747378645" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- オフラインゲーム集 -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.オフラインゲーム集.jpg" alt="オフラインゲーム集">
+                        </div>
+                        <div class="app-content">
+                            <h3>オフラインゲーム集</h3>
+                            <p class="app-category">ゲームアプリ</p>
+                            <p class="app-description">
+                                通信不要のカジュアルゲーム集。飛行機の退屈な時間や通勤時間に
+                                楽しめる、シンプルで中毒性のあるゲームを複数収録。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">オフライン</span>
+                                <span class="feature-tag">カジュアル</span>
+                                <span class="feature-tag">複数ゲーム</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="https://apps.apple.com/jp/app/%E3%82%AA%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%A0-%E9%A3%9B%E8%A1%8C%E6%A9%9F%E3%81%AE%E9%80%80%E5%B1%88%E3%81%AA%E6%99%82%E9%96%93%E3%81%AB/id6751052495" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SpeedCamera -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.SpeedCamera.png" alt="SpeedCamera">
+                        </div>
+                        <div class="app-content">
+                            <h3>SpeedCamera</h3>
+                            <p class="app-category">ユーティリティアプリ</p>
+                            <p class="app-description">
+                                広告なしの無音カメラアプリ。素早く写真を撮影したい時に最適。
+                                シンプルなUIで操作しやすく、ストレスフリーな撮影体験を提供。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">広告なし</span>
+                                <span class="feature-tag">無音撮影</span>
+                                <span class="feature-tag">シンプルUI</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TomYumKitchen -->
+                    <div class="app-card">
+                        <div class="app-image">
+                            <img src="img/appaikon.TomYumKitchen.jpg" alt="TomYumKitchen">
+                        </div>
+                        <div class="app-content">
+                            <h3>TomYumKitchen</h3>
+                            <p class="app-category">飲食店アプリ</p>
+                            <p class="app-description">
+                                架空のタイ料理店のモバイルアプリ。企業に依頼を受けるための
+                                アプリ開発例として作成。メニュー表示、予約機能、店舗情報などを実装。
+                            </p>
+                            <div class="app-features">
+                                <span class="feature-tag">メニュー表示</span>
+                                <span class="feature-tag">予約機能</span>
+                                <span class="feature-tag">店舗情報</span>
+                                <span class="feature-tag">企業向け</span>
+                            </div>
+                            <div class="app-links">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fab fa-apple"></i>
+                                    App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Webサイト制作セクション -->
+        <section class="portfolio-section websites-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Webサイト制作</h2>
+                    <p class="section-subtitle">Web Development</p>
+                    <p class="section-description">レスポンシブデザインとユーザビリティを重視したWebサイト</p>
+                </div>
+                
+                <div class="websites-grid">
+                    <!-- TOOOA公式サイト -->
+                    <div class="website-card featured">
+                        <div class="website-image">
+                            <img src="img/TOOOA公式サイト.png" alt="TOOOA公式サイト">
+                        </div>
+                        <div class="website-content">
+                            <h3>TOOOA公式サイト</h3>
+                            <p class="website-category">コーポレートサイト</p>
+                            <p class="website-description">
+                                自社のコーポレートサイト。アプリ開発会社としてのブランディングと
+                                サービス紹介を目的としたサイト。レスポンシブデザインで
+                                あらゆるデバイスに対応。
+                            </p>
+                            <div class="website-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">レスポンシブ</span>
+                            </div>
+                            <div class="website-links">
+                                <a href="index.html" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    サイトを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discover East Timor -->
+                    <div class="website-card">
+                        <div class="website-image">
+                            <img src="img/東ティモール観光ガイド.png" alt="Discover East Timor">
+                        </div>
+                        <div class="website-content">
+                            <h3>東ティモール観光ガイド</h3>
+                            <p class="website-category">観光促進サイト</p>
+                            <p class="website-description">
+                                東ティモールの観光促進を目的としたWebサイト。現地の豊かな自然や文化を
+                                外国人観光客に紹介。英語で制作し、直感的な操作と温かい雰囲気のデザインを実現。
+                            </p>
+                            <div class="website-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">英語サイト</span>
+                            </div>
+                            <div class="website-links">
+                                <a href="https://oto0928.github.io/EastTimor/" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    サイトを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- その他の作品セクション -->
+        <section class="portfolio-section other-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">その他の作品</h2>
+                    <p class="section-subtitle">Other Works</p>
+                    <p class="section-description">技術スキルと創造性を活かした様々なプロジェクト</p>
+                </div>
+                
+                <div class="other-grid">
+                    <!-- プロフィールサイト -->
+                    <div class="other-card">
+                        <div class="other-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="other-content">
+                            <h3>プロフィールサイト</h3>
+                            <p class="other-description">
+                                個人の経歴、スキル、価値観を紹介するプロフィールサイト。
+                                タイムライン形式で経歴を視覚的に表現。
+                            </p>
+                            <div class="other-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="other-links">
+                                <a href="profile.html" class="btn btn-outline">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    サイトを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ブログサイト -->
+                    <div class="other-card">
+                        <div class="other-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="other-content">
+                            <h3>ブログサイト</h3>
+                            <p class="other-description">
+                                技術記事、開発ノウハウ、海外経験を発信するブログサイト。
+                                記事一覧、詳細ページ、カテゴリ分類機能を実装。
+                            </p>
+                            <div class="other-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="other-links">
+                                <a href="blog.html" class="btn btn-outline">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    サイトを見る
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- データベース設計 -->
+                    <div class="other-card">
+                        <div class="other-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="other-content">
+                            <h3>データベース設計</h3>
+                            <p class="other-description">
+                                アプリ開発で使用する単語データベースの設計・構築。
+                                効率的な検索と管理を可能にする構造設計。
+                            </p>
+                            <div class="other-tech">
+                                <span class="tech-tag">データベース設計</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">データ管理</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UI/UXデザイン -->
+                    <div class="other-card">
+                        <div class="other-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="other-content">
+                            <h3>UI/UXデザイン</h3>
+                            <p class="other-description">
+                                アプリとWebサイトのUI/UXデザイン。ユーザビリティを重視した
+                                直感的なインターフェース設計。
+                            </p>
+                            <div class="other-tech">
+                                <span class="tech-tag">UI設計</span>
+                                <span class="tech-tag">UX設計</span>
+                                <span class="tech-tag">プロトタイピング</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技術スタックセクション -->
+        <section class="portfolio-section tech-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">技術スタック</h2>
+                    <p class="section-subtitle">Technology Stack</p>
+                    <p class="section-description">使用している技術・ツール・フレームワーク</p>
+                </div>
+                
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3><i class="fas fa-mobile-alt"></i> モバイル開発</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Swift</span>
+                            <span class="tech-item">Xcode</span>
+                            <span class="tech-item">iOS SDK</span>
+                            <span class="tech-item">UIKit</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3><i class="fas fa-code"></i> Web開発</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">レスポンシブデザイン</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3><i class="fas fa-database"></i> データベース</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">SQLite</span>
+                            <span class="tech-item">Core Data</span>
+                            <span class="tech-item">データベース設計</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h3><i class="fas fa-palette"></i> デザイン</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">UI/UX設計</span>
+                            <span class="tech-item">プロトタイピング</span>
+                            <span class="tech-item">Adobe Creative Suite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせCTA -->
+        <section class="portfolio-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>プロジェクトのご相談はお気軽に</h2>
+                    <p>アプリ開発、Webサイト制作、その他のプロジェクトについて<br>お気軽にお問い合わせください。</p>
+                    <div class="cta-buttons">
+                        <a href="index.html#contact" class="btn btn-primary">お問い合わせ</a>
+                        <a href="profile.html" class="btn btn-secondary">プロフィールを見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <img src="img/TOOOA.png" alt="TOOOA" class="footer-logo">
+                        <span class="footer-logo-text">TOOOA Co., Ltd.</span>
+                    </div>
+                    <p class="footer-description">
+                        革新的なアプリ開発で、<br>
+                        ユーザーの時間価値を最大化します。
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ナビゲーション</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="index.html#about">会社概要</a></li>
+                        <li><a href="index.html#services">サービス</a></li>
+                        <li><a href="portfolio.html">ポートフォリオ</a></li>
+                        <li><a href="profile.html">プロフィール</a></li>
+                        <li><a href="blog.html">ブログ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>フォローする</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/oto0928" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TOOOA Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
