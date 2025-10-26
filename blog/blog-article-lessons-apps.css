@@ -1,4 +1,4 @@
-/* タイ留学ブログ記事専用スタイル */
+/* ブログ記事ページ専用スタイル */
 
 /* パンくずナビ */
 .breadcrumb {
@@ -58,7 +58,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('img/blog.thai.発表.jpeg') center/cover;
+    background: url('../img/会社イメージ４.png') center/cover;
     opacity: 0.1;
     z-index: -1;
 }
@@ -131,6 +131,7 @@
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .author-info-detailed h3 {
@@ -209,6 +210,7 @@
     height: 400px;
     object-fit: cover;
     border-radius: 16px;
+    box-shadow: var(--shadow-lg);
 }
 
 .image-caption {
@@ -373,11 +375,6 @@
 }
 
 /* テーブル */
-.comparison-table-container {
-    overflow-x: auto;
-    margin: 2rem 0;
-}
-
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
@@ -385,6 +382,7 @@
     background: white;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
 
 .comparison-table th,
@@ -453,8 +451,8 @@
     background: white;
     padding: 2rem;
     border-radius: 12px;
+    box-shadow: var(--shadow-sm);
     text-align: center;
-    border: 1px solid var(--border-light);
 }
 
 .principle-icon {
@@ -517,11 +515,6 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-}
-
-.insight-content h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
 .ux-takeaway {
@@ -610,7 +603,7 @@
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
     margin: 2rem 0;
 }
 
@@ -649,9 +642,9 @@
 .experience-card {
     background: white;
     border-radius: 12px;
+    box-shadow: var(--shadow-sm);
     margin: 2rem 0;
     overflow: hidden;
-    border: 1px solid var(--border-light);
 }
 
 .card-header {
@@ -681,6 +674,134 @@
 
 /* コードブロック */
 .code-block {
+    background: #2d3748;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    color: #e2e8f0;
+}
+
+.code-block code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .insight-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategy-timeline .timeline-item {
+        padding-left: 2rem;
+    }
+    
+    .roadmap-item {
+        padding-left: 2rem;
+    }
+}
+
+/* フィードバックセクション */
+.feedback-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feedback-item {
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid;
+}
+
+.feedback-item.positive {
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    border-color: #4caf50;
+}
+
+.feedback-item.negative {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-color: #f44336;
+}
+
+.feedback-item h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feedback-item.positive h4 {
+    color: #2e7d32;
+}
+
+.feedback-item.negative h4 {
+    color: #c62828;
+}
+
+/* タイムライン */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.timeline-content {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* コードブロック */
+.code-block {
     margin: 2rem 0;
     border-radius: 12px;
     overflow: hidden;
@@ -693,9 +814,6 @@
     padding: 1rem 1.5rem;
     margin: 0;
     font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 .code-block pre {
@@ -708,32 +826,94 @@
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #e2e8f0;
 }
 
-/* 今後の展開 */
-.future-plans {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* アプリショーケース */
+.app-showcase { margin: 2rem 0; }
+
+/* 簡易版リスト表示 */
+.app-list-compact {
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 2;
+    color: var(--text-dark);
+}
+
+/* 簡易版 箇条書き */
+.bullet-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+/* ビジネスインサイト */
+.business-insights {
     margin: 2rem 0;
 }
 
-.plan-item {
+.insight-item {
     background: white;
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 2rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
 }
 
-.plan-item h4 {
+.insight-item h4 {
     color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* 失敗談 */
+.failure-story {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border: 2px solid #f44336;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.failure-story h4 {
+    color: #c62828;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
+}
+
+/* 簡易版 番号リスト */
+.plan-list {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+/* 重要なポイント */
+.key-takeaways {
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.key-takeaways h3 {
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.key-takeaways ol {
+    padding-left: 1.5rem;
+}
+
+.key-takeaways li {
+    margin-bottom: 1rem;
 }
 
 /* 記事アクション */
@@ -857,6 +1037,7 @@
 
 .related-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .related-img {
@@ -899,6 +1080,7 @@
     border: 1px solid var(--border-light);
     border-radius: 16px;
     padding: 2rem;
+    box-shadow: var(--shadow-sm);
 }
 
 .sidebar-widget h4 {
@@ -913,6 +1095,23 @@
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.5rem;
+}
+
+/* Sidebar hardening: prevent code styles bleed and enforce readable typography */
+.article-sidebar .sidebar-widget,
+.article-sidebar .sidebar-widget * {
+    white-space: normal;
+    font-family: 'Inter', 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.article-sidebar .author-widget-simple {
+    background: #f8fafc !important;
+    color: var(--text-dark) !important;
+}
+.article-sidebar .author-widget-simple .author-title {
+    color: var(--primary-color) !important;
+}
+.article-sidebar .author-widget-simple .author-bio {
+    color: var(--text-light) !important;
 }
 
 .author-widget-simple h4 {
@@ -976,12 +1175,34 @@
     background: var(--secondary-color);
 }
 
+.author-social .social-link {
+    width: 48px;                 /* タップ目標の最小 44px を満たす */
+    height: 48px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #3b3b3b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.author-social .social-link:hover {
+    background: #ffffff;
+}
+
+/* アイコンの視認性を確保 */
+.author-social .social-link i {
+    color: var(--primary-color);
+}
+
 /* 目次ウィジェット */
 .toc-widget {
     position: sticky;
     top: 100px;
-    z-index: 2;
-    background: #ffffff;
+    z-index: 2;               /* 目次を他要素より前面に */
+    background: #ffffff;      /* 重なり時の読みやすさ確保 */
 }
 
 .toc-nav ul {
@@ -1060,23 +1281,15 @@
         gap: 1.5rem;
     }
 
-    .principles-grid {
+    .feedback-section {
         grid-template-columns: 1fr;
-    }
-    
-    .insight-item {
-        grid-template-columns: 1fr;
-    }
-    
-    .strategy-timeline .timeline-item {
-        padding-left: 2rem;
-    }
-    
-    .roadmap-item {
-        padding-left: 2rem;
     }
 
     .future-plans {
+        grid-template-columns: 1fr;
+    }
+
+    .lessons-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1096,10 +1309,6 @@
 
     .toc-widget {
         position: static;
-    }
-
-    .comparison-table-container {
-        overflow-x: auto;
     }
 }
 
@@ -1136,12 +1345,9 @@
         font-size: 1.5rem;
     }
 
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-image {
-        height: 150px;
+    .app-item-detailed {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -1157,6 +1363,14 @@
     transform: translateY(0);
 }
 
+/* セーフティ: 非表示化を発生させうる外部の強制スタイルを打ち消す */
+.article-body section *,
+.article-body .app-showcase *,
+.article-body .lessons-grid *,
+.article-body .future-plans * {
+    color: inherit;
+}
+
 /* 読み進捗バー */
 .reading-progress {
     position: fixed;
@@ -1167,4 +1381,41 @@
     background: var(--gradient-primary);
     z-index: 1000;
     transition: width 0.1s ease;
+}
+
+/* ---- 可読性の強制補正（一部セクションが白文字化するケースに対応） ---- */
+#app-portfolio,
+#lessons-learned,
+#future {
+    color: var(--text-dark);
+    background: #ffffff; /* セクション内背景を白で固定 */
+}
+
+#app-portfolio h1,
+#app-portfolio h2,
+#app-portfolio h3,
+#app-portfolio h4,
+#app-portfolio p,
+#app-portfolio li,
+#lessons-learned h1,
+#lessons-learned h2,
+#lessons-learned h3,
+#lessons-learned h4,
+#lessons-learned p,
+#lessons-learned li,
+#future h1,
+#future h2,
+#future h3,
+#future h4,
+#future p,
+#future li {
+    color: var(--text-dark) !important;
+}
+
+/* セクション直下のカード群が消える（透明化する）トラブル対策 */
+#app-portfolio .app-showcase,
+#lessons-learned .lessons-grid,
+#future .future-plans {
+    opacity: 1 !important;
+    transform: none !important;
 }

@@ -1717,6 +1717,7 @@ body {
     transition: transform 0.5s ease-in-out;
     gap: 1.5rem;
     width: max-content; /* コンテンツに合わせて幅を調整 */
+    transform: translateX(0); /* 初期位置を明示的に設定 */
 }
 
 .app-slide {

@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const slides = slider.querySelectorAll('.app-slide');
     const totalSlides = slides.length;
-    let currentSlide = 0;
+    let currentSlide = 0; // 現在のカード位置（0から始まる）
     let slidesPerView = 4; // デフォルトで4つ表示
     
     // レスポンシブ対応
@@ -432,12 +432,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ドットを生成
+    // ドットを生成（カード単位で移動するため、ドット数を調整）
     function createDots() {
         dotsContainer.innerHTML = '';
-        const totalPages = Math.ceil(totalSlides / slidesPerView);
+        const maxDots = totalSlides - slidesPerView + 1;
         
-        for (let i = 0; i < totalPages; i++) {
+        for (let i = 0; i < maxDots; i++) {
             const dot = document.createElement('div');
             dot.classList.add('slider-dot');
             if (i === 0) dot.classList.add('active');
@@ -446,15 +446,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // スライダーを更新
+    // スライダーを更新（カード単位で移動）
     function updateSlider() {
         const slideWidth = 300 + 24; // 300px + 24px gap
-        const translateX = -(currentSlide * slideWidth * slidesPerView);
+        const translateX = -(currentSlide * slideWidth);
         slider.style.transform = `translateX(${translateX}px)`;
         
         // ボタンの有効/無効状態を更新
         prevBtn.disabled = currentSlide === 0;
-        nextBtn.disabled = currentSlide >= Math.ceil(totalSlides / slidesPerView) - 1;
+        nextBtn.disabled = currentSlide >= totalSlides - slidesPerView;
         
         // ドットのアクティブ状態を更新
         const dots = dotsContainer.querySelectorAll('.slider-dot');
@@ -465,12 +465,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 指定したスライドに移動
     function goToSlide(slideIndex) {
-        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        const maxSlide = totalSlides - slidesPerView;
         currentSlide = Math.max(0, Math.min(slideIndex, maxSlide));
         updateSlider();
     }
     
-    // 前のスライド
+    // 前のスライド（1枚ずつ移動）
     function prevSlide() {
         if (currentSlide > 0) {
             currentSlide--;
@@ -478,9 +478,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // 次のスライド
+    // 次のスライド（1枚ずつ移動）
     function nextSlide() {
-        const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+        const maxSlide = totalSlides - slidesPerView;
         if (currentSlide < maxSlide) {
             currentSlide++;
             updateSlider();
@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoSlideInterval;
     function startAutoSlide() {
         autoSlideInterval = setInterval(() => {
-            const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+            const maxSlide = totalSlides - slidesPerView;
             if (currentSlide < maxSlide) {
                 nextSlide();
             } else {
@@ -522,6 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('mouseleave', startAutoSlide);
     
     // 初期化
+    currentSlide = 0; // 明示的に最初の位置に設定
     updateSlidesPerView();
     createDots();
     updateSlider();
