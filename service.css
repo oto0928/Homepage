@@ -1,0 +1,735 @@
+/* サービスページ専用スタイル */
+
+/* 共通セクションスタイル */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ヒーローセクション */
+.service-hero {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    padding: 8rem 0 6rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* サービス概要 */
+.service-intro {
+    padding: 6rem 0 2rem;
+    background: white;
+}
+
+.service-intro .section-title {
+    color: #000000;
+}
+
+.service-intro .container {
+    border-bottom: none;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    text-align: center;
+    color: #4b5563;
+}
+
+/* アプリアイコンスライダー */
+.app-icons-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0;
+    background: white;
+    position: relative;
+}
+
+.app-icons-slider::before,
+.app-icons-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.app-icons-slider::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.app-icons-slider::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+.icons-track {
+    display: flex;
+    gap: 2rem;
+    animation: slideLeft 40s linear infinite;
+}
+
+.icon-item {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    animation-play-state: paused;
+}
+
+.icon-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 強みセクション */
+.service-points {
+    padding: 6rem 0;
+    background-image: url('../img/background/background1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.service-points::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.service-points .container {
+    position: relative;
+    z-index: 1;
+}
+
+.service-points .section-title {
+    color: white;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.point-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.point-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.point-icon {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.point-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.point-card p {
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+/* プランセクション */
+.service-plans {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+}
+
+.service-plans .section-title {
+    color: white;
+}
+
+.service-plans .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.pricing-card {
+    background: #f5f5f0;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.plan-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.plan-price {
+    margin-bottom: 0.5rem;
+}
+
+.price-main {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.plan-tax {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.plan-pages {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 auto 2rem;
+    display: inline-block;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.plan-features li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+.plan-info {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 2px solid #ddd;
+}
+
+.plan-delivery {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.plan-support {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.plan-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* サービスの流れ */
+.service-flow {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, #f9fafb, white);
+}
+
+.service-flow .section-title {
+    color: #000000;
+}
+
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.flow-step {
+    text-align: center;
+    position: relative;
+}
+
+.flow-step::after {
+    content: '→';
+    position: absolute;
+    right: -1.5rem;
+    top: 2rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.flow-step:last-child::after {
+    display: none;
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+.flow-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.flow-step p {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 保守サービス */
+.service-maintenance {
+    padding: 6rem 0;
+    background: white;
+}
+
+.service-maintenance .section-title {
+    color: #000000;
+}
+
+.maintenance-intro {
+    font-size: 1.1rem;
+    line-height: 2;
+    max-width: 900px;
+    margin: 2rem auto 3rem;
+    text-align: center;
+    color: #4b5563;
+}
+
+.maintenance-details {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.maintenance-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.maintenance-item:hover {
+    background: white;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+    transform: translateY(-5px);
+}
+
+.maintenance-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.maintenance-item h4 {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* 選ばれる理由 */
+.why-choose-us {
+    padding: 6rem 0;
+    background: white;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.reason-section {
+    text-align: center;
+}
+
+.reason-content {
+    text-align: center;
+}
+
+.reason-header h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.reason-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.reason-image {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reason-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reason-image.line-icon {
+    background: #06C755;
+}
+
+.reason-image.line-icon i {
+    font-size: 10rem;
+    color: white;
+}
+
+.reason-table {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.reason-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason-table thead {
+    background: #4dd0c4;
+}
+
+.reason-table th {
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.reason-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.reason-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.reason-table tbody tr:nth-child(odd) {
+    background: #f9fafb;
+}
+
+.reason-table td strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.table-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.table-note p {
+    margin: 0.3rem 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.table-note small {
+    font-size: 0.85rem;
+}
+
+.reason-text {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* FAQ */
+.service-faq {
+    padding: 6rem 0;
+    background: white;
+}
+
+.service-faq .section-title {
+    color: #000000;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.faq-answer {
+    color: #6b7280;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+/* CTA */
+.service-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    text-align: center;
+    color: white;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .points-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-step::after {
+        content: '↓';
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -2rem;
+        transform: translateX(-50%);
+    }
+
+    .maintenance-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        gap: 2rem;
+    }
+    
+    .icon-item {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .icons-track {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+    }
+
+    .maintenance-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .reason-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .reason-image.line-icon i {
+        font-size: 8rem;
+    }
+}
+

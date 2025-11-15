@@ -680,14 +680,15 @@
 }
 
 .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
+    background: #fbbf24;
+    color: #1f2937;
+    border-color: #fbbf24;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
     transform: translateY(-2px);
 }
 

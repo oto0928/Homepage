@@ -1,4 +1,4 @@
-# TOOOA Co., Ltd. 公式ウェブサイト
+# TOOOA studio 公式ウェブサイト
 
 ![TOOOA Website](img/README-img.png)
 
@@ -7,7 +7,7 @@
 
 ## 📖 概要
 
-TOOOA Co., Ltd.（株式会社TOOOA）の公式ウェブサイトです。東亜から世界へ、アプリで未来をつくることをミッションに、モバイルアプリ開発とWebサイト制作を行っています。
+TOOOA studio（株式会社TOOOA）の公式ウェブサイトです。東亜から世界へ、アプリで未来をつくることをミッションに、モバイルアプリ開発とWebサイト制作を行っています。
 
 ## ✨ 主な機能
 
@@ -189,7 +189,7 @@ TOOOA-homepage/
 
 ## 📄 ライセンス
 
-© 2025 TOOOA Co., Ltd. All rights reserved.
+© 2025 TOOOA studio All rights reserved.
 
 ---
 
