@@ -1,5 +1,13 @@
 /* ポートフォリオページ専用スタイル */
 
+/* 横スクロール防止 */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 /* ヒーローセクション */
 .portfolio-hero {
     padding: 8rem 0 6rem;

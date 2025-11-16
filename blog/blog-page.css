@@ -1,5 +1,13 @@
 /* ブログページ専用スタイル */
 
+/* 横スクロール防止 */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 /* ブログヘッダー */
 .blog-header {
     background: var(--gradient-primary);

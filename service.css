@@ -1,5 +1,13 @@
 /* サービスページ専用スタイル */
 
+/* 横スクロール防止 */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 /* 共通セクションスタイル */
 .section-title {
     text-align: center;
@@ -97,7 +105,7 @@
 .icons-track {
     display: flex;
     gap: 2rem;
-    animation: slideLeft 40s linear infinite;
+    animation: slideLeft 25s linear infinite;
 }
 
 .icon-item {
@@ -668,7 +676,8 @@
 /* レスポンシブ対応 */
 @media (max-width: 1024px) {
     .points-grid,
-    .pricing-grid {
+    .pricing-grid,
+    .reasons-grid {
         grid-template-columns: 1fr;
     }
 
@@ -705,7 +714,7 @@
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
 
     .hero-description {

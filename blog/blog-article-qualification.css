@@ -1,5 +1,13 @@
 /* 資格取得体験ブログ記事専用スタイル */
 
+/* 横スクロール防止 */
+section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
 /* パンくずナビ */
 .breadcrumb {
     background: var(--bg-light);
