@@ -911,73 +911,227 @@ body {
 }
 
 /* ポートフォリオセクション */
+/* ポートフォリオセクション - 新デザイン */
 .portfolio {
     padding: 6rem 0;
-    background: white;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
 }
 
-.app-gallery {
+/* ポートフォリオグリッド */
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
-.app-item {
-    background: white;
-    border-radius: 16px;
+.portfolio-item {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.portfolio-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-light);
-    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.app-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.app-link {
+/* ポートフォリオカード */
+.portfolio-card {
+    display: block;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
     text-decoration: none;
     color: inherit;
-    display: block;
-    width: 100%;
+    transition: all 0.4s ease;
+    border: 1px solid var(--border-light);
     height: 100%;
 }
 
-.app-item.featured {
-    grid-column: span 2;
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+    border-color: var(--primary-color);
 }
 
-.app-item.featured .app-image {
-    aspect-ratio: 1;
-}
-
-.app-image {
+/* カード画像 */
+.card-image {
+    position: relative;
     width: 100%;
-    aspect-ratio: 1;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     object-position: center;
-    background: #f8fafc;
-    transition: transform 0.3s ease;
     padding: 1rem;
+    transition: transform 0.4s ease;
 }
 
-.app-item:hover .app-image {
+.portfolio-card:hover .card-image img {
     transform: scale(1.05);
 }
 
-.app-info {
-    padding: 1.5rem;
+/* カードオーバーレイ */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(99, 102, 241, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-.app-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.portfolio-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.view-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transform: scale(0.5);
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .view-icon {
+    transform: scale(1);
+}
+
+/* カードコンテンツ */
+.card-content {
+    padding: 1.75rem;
+}
+
+.card-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
 }
 
-.app-info p {
+.card-description {
+    font-size: 0.95rem;
     color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 4rem 0;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .card-content {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-description {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .card-image {
+        height: 150px;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-category {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.75rem;
+    }
+    
+    .card-title {
+        font-size: 0.9rem;
+    }
+    
+    .card-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* CTA */
+.portfolio-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.portfolio-cta .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.portfolio-cta .btn:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.portfolio-cta .btn i {
     font-size: 0.9rem;
 }
 
