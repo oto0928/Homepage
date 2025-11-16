@@ -153,7 +153,7 @@ class TypeWriter {
     }
 }
 
-// フォームバリデーション
+// フォームバリデーション + Formspree用の件名設定
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -178,8 +178,22 @@ if (contactForm) {
             return;
         }
 
-        // バリデーション成功時はメール送信を実行
-        showNotification('メールアプリが開きます。送信ボタンを押してメールを送信してください。', 'success');
+        // Formspree に渡すメール件名を hidden フィールドに設定
+        const hiddenSubjectInput = this.querySelector('input[name="_subject"]');
+        if (hiddenSubjectInput) {
+            const subjectLabelMap = {
+                'app-development': 'アプリ開発依頼',
+                'ui-ux': 'UI/UX設計',
+                'consulting': '技術コンサルティング',
+                'lecture': '講演・セミナー',
+                'other': 'その他'
+            };
+            const subjectText = subjectLabelMap[subject] || subject || 'お問い合わせ';
+            hiddenSubjectInput.value = `TOOOA studio お問い合わせ: ${subjectText}（${name}様）`;
+        }
+
+        // バリデーション成功時の案内（Formspree 経由）
+        showNotification('送信中です。数秒後に送信完了画面が表示されます。', 'success');
     });
 }
 
